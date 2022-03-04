@@ -2,6 +2,10 @@
 
 ##### Awsome **cprint()** function to colored terminal text. Supported full RGB!
 
+---
+
+
+
 ### Installation
 
 You can install `hue` with **pip** as follows:
@@ -55,7 +59,6 @@ cprint('This string is italic and bold', , styles=['italic', 'bold'])
 
 > ILLUMINATING, ULTIMATE_GRAY, CLASSIC_BLUE, LIVING_CORAL, ULTRA_VIOLET, GREENERY, ROSE_QUARTZ, SERENITY, MARSALA, RADIANT_ORCHID, EMERALD, TANGERINE_TANGO, HONEYSUCKLE, TURQUOISE
 
-
 #### List of all colors from the 4bit palette
 
 > BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, BRIGHT_BLACK, BRIGHT_RED, BRIGHT_GREEN, BRIGHT_YELLOW, BRIGHT_BLUE, BRIGHT_MAGENTA, BRIGHT_CYAN, BRIGHT_WHITE
@@ -72,4 +75,3 @@ YOUR_COLOR = Color('rgb', 191, 25, 50)
 **Note:** Windows versions below windows 10 do not support ANSI escape sequences so the colors will not be printed in command prompt.
 
 ### *..and this is just the beginning of this great library!* 💚
-
