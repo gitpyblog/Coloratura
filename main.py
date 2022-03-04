@@ -59,6 +59,8 @@ RESET_ALL = '\033[0m'
 
 def cprint(*text, color: Color = None, bg: Color = None, styles: list = None, sep='', end='\n') -> print:
     """
+    Function that returns a colored string.
+
     Example:
         cprint(value, ..., color=BLUE, bg=GRAY, styles=['bold', 'italic'])
 
