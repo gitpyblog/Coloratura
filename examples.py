@@ -1,4 +1,4 @@
-from main import cprint, Pantone, Bit4
+from Coloratura import cprint, Pantone, Bit4
 
 
 def test_styles():
