@@ -3,7 +3,11 @@ class Color:
         """
         With this class you can create your own custom colors.
 
-        Example: black_rgb = Color('rgb' , 0, 0, 0)
+        Example:
+            black_rgb = Color('rgb' , 0, 0, 0)
+        Args:
+            color_space: color space. Currently supported rgb
+            args: Color values
         """
 
         self.color_space = str(color_space).lower()
@@ -12,20 +16,20 @@ class Color:
 
 class Pantone:
     """Pantone colors"""
-    ILLUMINATING = Color('rgb', 245, 233, 77)  # 2021
-    ULTIMATE_GRAY = Color('rgb', 147, 149, 151)  # 2021
-    CLASSIC_BLUE = Color('rgb', 15, 76, 169)  # 2020
-    LIVING_CORAL = Color('rgb', 255, 11, 97)  # 2019
-    ULTRA_VIOLET = Color('rgb', 95, 75, 139)  # 2018
-    GREENERY = Color('rgb', 136, 176, 75)  # 2017
-    ROSE_QUARTZ = Color('rgb', 248, 205, 205)  # 2016
-    SERENITY = Color('rgb', 147, 169, 209)  # 2016
-    MARSALA = Color('rgb', 151, 90, 88)  # 2015
-    RADIANT_ORCHID = Color('rgb', 176, 103, 161)  # 2014
-    EMERALD = Color('rgb', 0, 153, 123)  # 2013
-    TANGERINE_TANGO = Color('rgb', 221, 65, 36)  # 2012
-    HONEYSUCKLE = Color('rgb', 216, 90, 123)  # 2011
-    TURQUOISE = Color('rgb', 96, 181, 170)  # 2010
+    ILLUMINATING = Color('rgb', 245, 233, 77)  # 2021 - Color of the year
+    ULTIMATE_GRAY = Color('rgb', 147, 149, 151)  # 2021 - Color of the year
+    CLASSIC_BLUE = Color('rgb', 15, 76, 169)  # 2020 - Color of the year
+    LIVING_CORAL = Color('rgb', 255, 11, 97)  # 2019 - Color of the year
+    ULTRA_VIOLET = Color('rgb', 95, 75, 139)  # 2018 - Color of the year
+    GREENERY = Color('rgb', 136, 176, 75)  # 2017 - Color of the year
+    ROSE_QUARTZ = Color('rgb', 248, 205, 205)  # 2016 - Color of the year
+    SERENITY = Color('rgb', 147, 169, 209)  # 2016 - Color of the year
+    MARSALA = Color('rgb', 151, 90, 88)  # 2015 - Color of the year
+    RADIANT_ORCHID = Color('rgb', 176, 103, 161)  # 2014 - Color of the year
+    EMERALD = Color('rgb', 0, 153, 123)  # 2013 - Color of the year
+    TANGERINE_TANGO = Color('rgb', 221, 65, 36)  # 2012 - Color of the year
+    HONEYSUCKLE = Color('rgb', 216, 90, 123)  # 2011 - Color of the year
+    TURQUOISE = Color('rgb', 96, 181, 170)  # 2010 - Color of the year
 
 
 class Bit4:
@@ -59,12 +63,12 @@ def cprint(*text, color: Color = None, bg: Color = None, styles: list = None, se
         cprint(value, ..., color=BLUE, bg=GRAY, styles=['bold', 'italic'])
 
     Args:
-        text: string to format
-        color: color of the text
-        bg: background color
-        styles: list of styles to apply to the text
-        sep: separator between the arguments
-        end: The end parameter defines what character is printed at the end of the string, defaults to new line
+        text: String to format
+        color: Color of the text
+        bg: Background color
+        styles: List of styles to apply to the text
+        sep: Separator between the arguments
+        end: End parameter defines what character is printed at the end of the string, defaults to new line character.
 
     Returns:
         print() with a color, background color, and styles.
