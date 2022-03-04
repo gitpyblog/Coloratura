@@ -1,23 +1,17 @@
-from random import choice
-
-
 class Color:
-    def __init__(self, color_space, *args):
+    def __init__(self, color_space: str | None, *args: any):
+        """
+        With this class you can create your own custom colors.
+
+        Example: black_rgb = Color('rgb' , 0, 0, 0)
+        """
+
         self.color_space = str(color_space).lower()
         self.color = args
 
-    def __str__(self):
-        if self.color_space == 'rgb':
-            r = self.color[0]
-            g = self.color[1]
-            b = self.color[2]
-            return f'{r};{g};{b}'
-        else:
-            raise NameError('Kolor błędnie zdefiniowany')
-
 
 class Pantone:
-    # Colors of the year
+    """Pantone colors"""
     ILLUMINATING = Color('rgb', 245, 233, 77)  # 2021
     ULTIMATE_GRAY = Color('rgb', 147, 149, 151)  # 2021
     CLASSIC_BLUE = Color('rgb', 15, 76, 169)  # 2020
@@ -34,59 +28,74 @@ class Pantone:
     TURQUOISE = Color('rgb', 96, 181, 170)  # 2010
 
 
-RES_C = '\033[39m'
+class Bit4:
+    """4 BIT colors"""
+    BLACK = Color('bit4', 30)
+    RED = Color('bit4', 31)
+    GREEN = Color('bit4', 32)
+    YELLOW = Color('bit4', 33)
+    BLUE = Color('bit4', 34)
+    MAGENTA = Color('bit4', 35)
+    CYAN = Color('bit4', 36)
+    WHITE = Color('bit4', 37)
+    BRIGHT_BLACK = Color('bit4', 90)
+    BRIGHT_RED = Color('bit4', 91)
+    BRIGHT_GREEN = Color('bit4', 92)
+    BRIGHT_YELLOW = Color('bit4', 93)
+    BRIGHT_BLUE = Color('bit4', 94)
+    BRIGHT_MAGENTA = Color('bit4', 95)
+    BRIGHT_CYAN = Color('bit4', 96)
+    BRIGHT_WHITE = Color('bit4', 97)
+
+
+RES_COLORS = '\033[39m'
 RES_BG = '\033[49m'
 RESET_ALL = '\033[0m'
 
 
-def cprint(*text, sep='', end='\n', color=None, bg=None, styles=None):
-    new_text = sep.join(text)
+def cprint(*text, color: Color = None, bg: Color = None, styles: list = None, sep='', end='\n') -> print:
+    """
+    Example:
+        cprint(value, ..., color=BLUE, bg=GRAY, styles=['bold', 'italic'])
+
+    Args:
+        text: string to format
+        color: color of the text
+        bg: background color
+        styles: list of styles to apply to the text
+        sep: separator between the arguments
+        end: The end parameter defines what character is printed at the end of the string, defaults to new line
+
+    Returns:
+        print() with a color, background color, and styles.
+    """
+    update_string = sep.join(text)
 
     if color is not None:
-        new_text = f'\033[38;2;{color}m{new_text}'
+        if color.color_space == 'rgb':
+            update_string = f'\033[38;2;{color.color[0]};{color.color[1]};{color.color[2]}m{update_string}'
+        elif color.color_space == 'bit4':
+            update_string = f'\033[{color.color[0]}m{update_string}'
 
     if bg is not None:
-        new_text = f'\033[48;2;{bg}m{new_text}'
+        if bg.color_space == 'rgb':
+            update_string = f'\033[48;2;{bg.color[0]};{bg.color[1]};{bg.color[2]}m{update_string}'
+        elif bg.color_space == 'bit4':
+            update_string = f'\033[{bg.color[0] + 10}m{update_string}'
 
     if type(styles) is list and styles is not None:
         for style in styles:
             if 'bold' == style:
-                new_text = '\033[1m' + new_text
+                update_string = '\033[1m' + update_string
             if 'italic' == style:
-                new_text = '\033[3m' + new_text
+                update_string = '\033[3m' + update_string
             if 'underline' == style:
-                new_text = '\033[4m' + new_text
+                update_string = '\033[4m' + update_string
             if 'strong-underline' == style:
-                new_text = '\033[21m' + new_text
+                update_string = '\033[21m' + update_string
             if 'crossed-out' == style:
-                new_text = '\033[9m' + new_text
+                update_string = '\033[9m' + update_string
             if 'framed' == style:
-                new_text = '\033[51m' + new_text
+                update_string = '\033[51m' + update_string
 
-    return print(new_text, RESET_ALL, sep=sep, end=end)
-
-
-cprint('Ala ma kota', color=choice([Pantone.EMERALD, Pantone.LIVING_CORAL, Pantone.ROSE_QUARTZ]))
-
-cprint('Ala ma kota')
-cprint('Ala ma kota', styles=['italic'])
-cprint('Ala ma kota', styles=['bold'])
-cprint('Ala ma kota', styles=['underline'])
-cprint('Ala ma kota', styles=['strong-underline'])
-cprint('Ala ma kota', styles=['crossed-out'])
-cprint('Ala ma kota', styles=['framed'])
-cprint('Ala ma kota', styles=['italic', 'bold', 'strong-underline', 'crossed-out'])
-
-
-# for i in range(110):
-#     # print(f'\033[{i}m test{RESET_ALL} {i}')
-#     cprint(f'\033[{i}m', 'teścik', RESET_ALL, f' {i}', color=Pantone.LIVING_CORAL)
-
-# cprint(f'Ala ma kota.', 'Kot ma Alę!', color=Pantone.CLASSIC_BLUE)
-# cprint(f'Ala ma kota.', 'Kot ma Alę!', color=Pantone.ROSE_QUARTZ)
-# cprint(f'Ala ma kota.', 'Kot ma Alę!', color=Pantone.ULTRA_VIOLET)
-# cprint(f'Ala ma kota.', 'Kot ma Alę!', color=Pantone.MARSALA)
-# cprint(f'Ala ma kota.', 'Kot ma Alę!', color=Pantone.EMERALD)
-# cprint(f'Ala ma kota.', 'Kot ma Alę!', color=Pantone.ILLUMINATING)
-# cprint(f'Ala ma kota.', 'Kot ma Alę!', color=Pantone.LIVING_CORAL)
-# cprint(f'Ala ma kota.', 'Kot ma Alę!', color=Pantone.ULTIMATE_GRAY)
+    return print(update_string, RESET_ALL, sep=sep, end=end)
