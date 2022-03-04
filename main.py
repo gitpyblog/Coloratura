@@ -42,25 +42,26 @@ RESET_ALL = '\033[0m'
 def cprint(*text, sep='', end='\n', color=None, bg=None, styles=None):
     new_text = sep.join(text)
 
-    if styles is not None:
-        if 'bold' == styles:
-            new_text = '\033[1m' + new_text
-        if 'italic' == styles:
-            new_text = '\033[3m' + new_text
-        if 'underline' == styles:
-            new_text = '\033[4m' + new_text
-        if 'strong-underline' == styles:
-            new_text = '\033[21m' + new_text
-        if 'crossed-out' == styles:
-            new_text = '\033[9m' + new_text
-        if 'framed' == styles:
-            new_text = '\033[51m' + new_text
-
     if color is not None:
         new_text = f'\033[38;2;{color}m{new_text}'
 
     if bg is not None:
         new_text = f'\033[48;2;{bg}m{new_text}'
+
+    if type(styles) is list and styles is not None:
+        for style in styles:
+            if 'bold' == style:
+                new_text = '\033[1m' + new_text
+            if 'italic' == style:
+                new_text = '\033[3m' + new_text
+            if 'underline' == style:
+                new_text = '\033[4m' + new_text
+            if 'strong-underline' == style:
+                new_text = '\033[21m' + new_text
+            if 'crossed-out' == style:
+                new_text = '\033[9m' + new_text
+            if 'framed' == style:
+                new_text = '\033[51m' + new_text
 
     return print(new_text, RESET_ALL, sep=sep, end=end)
 
@@ -68,16 +69,14 @@ def cprint(*text, sep='', end='\n', color=None, bg=None, styles=None):
 cprint('Ala ma kota', color=choice([Pantone.EMERALD, Pantone.LIVING_CORAL, Pantone.ROSE_QUARTZ]))
 
 cprint('Ala ma kota')
-cprint('Ala ma kota', styles='italic')
-cprint('Ala ma kota', styles='bold')
-cprint('Ala ma kota', styles='underline')
-cprint('Ala ma kota', styles='strong-underline')
-cprint('Ala ma kota', styles='crossed-out')
-cprint('Ala ma kota', styles='framed')
+cprint('Ala ma kota', styles=['italic'])
+cprint('Ala ma kota', styles=['bold'])
+cprint('Ala ma kota', styles=['underline'])
+cprint('Ala ma kota', styles=['strong-underline'])
+cprint('Ala ma kota', styles=['crossed-out'])
+cprint('Ala ma kota', styles=['framed'])
+cprint('Ala ma kota', styles=['italic', 'bold', 'strong-underline', 'crossed-out'])
 
-cprint('Kot ma Alę', color=Pantone.LIVING_CORAL, bg=Pantone.ULTIMATE_GRAY)
-cprint('Kot ma Alę', color=Pantone.LIVING_CORAL, bg=Pantone.ULTIMATE_GRAY, styles='framed')
-cprint('Kot ma Alę', color=Pantone.LIVING_CORAL, bg=Pantone.ULTIMATE_GRAY, styles=['crossed-out', 'framed'])
 
 # for i in range(110):
 #     # print(f'\033[{i}m test{RESET_ALL} {i}')
