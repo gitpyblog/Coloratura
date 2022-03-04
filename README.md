@@ -8,7 +8,7 @@
 
 ### Installation
 
-You can install `hue` with **pip** as follows:
+You can install `coloratura` with **pip** as follows:
 
 ```
 pip install coloratura
@@ -35,16 +35,16 @@ But what if you want to print text with a colored background?
 cprint('This is great!', color=Pantone.EMERALD, bg=Pantone.ULTIMATE_GRAY)```
 ```
 
-You can also add decorations to the font:
+You can also add style to the font:
 
 ```python
 cprint('This string is italic and green', color=Bit4.GREEN, styles=['italic'])
 ```
 
-You can mix multiple text decorations
+You can mix multiple text styles
 
 ```python
-cprint('This string is italic and bold', , styles=['italic', 'bold'])
+cprint('This string is italic and bold', styles=['italic', 'bold'])
 ```
 
 ### Colors and styles

@@ -15,7 +15,7 @@ classifiers = [
 setup(
     name=NAME,
     version='0.9.0',
-    description='Awsome cprint() function to colored terminal text. Supported full RGB!',
+    description='Awesome cprint() function to colored terminal text. Supported full RGB!',
     # long_description='',
     keywords='color colour terminal text ansi windows colorama hue',
     url='https://github.com/DawidKos/Coloratura',
