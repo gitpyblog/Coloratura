@@ -6,7 +6,7 @@ NAME = 'coloratura'
 classifiers = [
     'Development Status :: 4 - Beta',
     'Programming Language :: Python :: 3',
-    'License :: MIT License',
+    'License :: OSI Approved :: MIT License',
     'Intended Audience :: Developers',
     'Operating System :: OS Independent',
     'Environment :: Console'
