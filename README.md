@@ -4,32 +4,44 @@
 
 ### Installation
 
-You can install `hue` with **pip** as follows:
+You can install coloratura with **pip** as follows:
 
-`pip install coloratura`
+```
+pip install coloratura
+```
 
 ### Usage
 
 First of all, get the basic cprint functions and selected color palettes:
 
-`python from coloratura import cprint, Pantone, Bit4`
+```python
+from coloratura import cprint, Pantone, Bit4
+```
 
 Printing colored text is incredibly ea``sy:
 
-`python cprint('This text is in the CLASSIC BLUE color from the Pantone palette', color=Pantone.CLASSIC_BLUE)`
+```python
+cprint('This text is in the CLASSIC BLUE color from the Pantone palette', color=Pantone.CLASSIC_BLUE)
+```
 
 **Easy right?**
 But what if you want to print text with a colored background?
 
-`python cprint('This is great!', color=Pantone.EMERALD, bg=Pantone.ULTIMATE_GRAY)`
+```python
+cprint('This is great!', color=Pantone.EMERALD, bg=Pantone.ULTIMATE_GRAY)
+```
 
-You can also add decorations to the font:
+You can also add styles to the font:
 
-`python cprint('This string is italic and green', color=Bit4.GREEN, styles=['italic'])`
+```python
+cprint('This string is italic and green', color=Bit4.GREEN, styles=['italic'])
+```
 
-You can mix multiple text decorations
+You can mix multiple text styles
 
-`python cprint('This string is italic and bold',, styles = ['italic', 'bold'])`
+```python
+cprint('This string is italic and bold',, styles = ['italic', 'bold'])```
+```
 
 ### Colors and styles
 
@@ -52,9 +64,11 @@ With the Color class you can define your own colors in the full RGB spectrum ðŸ˜
 
 Look how simple it is:
 
-`python YOUR_COLOR = Color('rgb', 191, 25, 50)`
+```python
+YOUR_COLOR = Color('rgb', 191, 25, 50)
+```
 
-**Note:** Windows versions below windows 10 do not support ANSI escape sequences so the colors will not be printed in
+**Note:** Windows versions below Windows 10 do not support ANSI escape sequences so the colors will not be printed in
 command prompt.
 
 ### *..and this is just the beginning of this great library!* ðŸ’š
