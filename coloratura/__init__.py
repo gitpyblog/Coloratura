@@ -4,4 +4,4 @@ from .colors import *
 
 __all__ = ['cprint', 'Color', 'Reset', 'Pantone', 'Bit4']
 
-__version__ = '0.9.13'
+__version__ = '0.9.14'
