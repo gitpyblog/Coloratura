@@ -5,7 +5,13 @@ NAME = 'coloratura'
 
 classifiers = [
     'Development Status :: 4 - Beta',
-    'Programming Language :: Python :: 3',
+    'Programming Language :: Python',
+    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
     'License :: OSI Approved :: MIT License',
     'Intended Audience :: Developers',
     'Operating System :: OS Independent',
@@ -14,7 +20,7 @@ classifiers = [
 
 setup(
     name=NAME,
-    version='0.9.11',
+    version='0.9.12',
     description='Awesome cprint() function to colored terminal text. Supported full RGB!',
     long_description=open('DESCRIPTION.md').read(),
     long_description_content_type='text/markdown',
