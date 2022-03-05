@@ -16,7 +16,6 @@ classifiers = [
     'Intended Audience :: Developers',
     'Operating System :: OS Independent',
     'Environment :: Console',
-    'Topic :: Colored terminal text'
 ]
 
 setup(
