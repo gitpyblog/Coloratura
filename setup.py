@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 NAME = 'coloratura'
-VERSION = '0.9.14'
+VERSION = '0.9.17'
 DESCRIPTION = '🦜Awesome cprint() function to colored terminal text. Supported full RGB!'
 CLASSIFIERS = [
     'Development Status :: 4 - Beta',
@@ -18,7 +18,7 @@ setup(
     author='pyblog.pl',
     author_email='rewolucjazywieniowa@gmail.com',
     description=DESCRIPTION,
-    long_description=open('DESCRIPTION.md').read(),
+    long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/DawidKos/Coloratura',
     license='MIT',
