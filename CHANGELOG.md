@@ -1,8 +1,8 @@
 # 🦜CHANGELOG
 
 ---
-### 🟡 0.9.11
-* Updated Programming Language in setup.py
+### 🟡 0.9.13
+* Updated setup.py
 
 ### 🟡 0.9.11
 * Added DESCRIPTION.md
