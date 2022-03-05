@@ -81,6 +81,7 @@ cprint('This string is italic and bold',, styles = ['italic', 'bold'])```
 >![Bit4](https://img.shields.io/badge/-MAGENTA-aa00aa?style=flat-square)
 >![Bit4](https://img.shields.io/badge/-CYAN-00aaaa?style=flat-square)
 >![Bit4](https://img.shields.io/badge/-WHITE-f0f0f0?style=flat-square)
+>
 >![Bit4](https://img.shields.io/badge/-BRIGHT__BLACK-555555?style=flat-square)
 >![Bit4](https://img.shields.io/badge/-BRIGHT__RED-ff5555?style=flat-square)
 >![Bit4](https://img.shields.io/badge/-BRIGHT__GREEN-55ff55?style=flat-square)
