@@ -1,1 +1,1 @@
-global-include *.txt *.py *.png *.jpg
+global-include *.py *.in *.md LICENSE
