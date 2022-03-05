@@ -89,7 +89,7 @@ cprint('This string is italic and bold', styles = ['italic', 'bold'])
 > ![Bit4](https://img.shields.io/badge/-BRIGHT__BLUE-5555ff?style=flat-square)
 > ![Bit4](https://img.shields.io/badge/-BRIGHT__MAGENTA-ff55ff?style=flat-square)
 > ![Bit4](https://img.shields.io/badge/-BRIGHT__CYAN-55ffff?style=flat-square)
-> ![Bit4](https://img.shields.io/badge/-BRIGHT__WHITE-f5f5f5?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-BRIGHT__WHITE-fafafa?style=flat-square)
 
 **Too little? 🤔**
 
