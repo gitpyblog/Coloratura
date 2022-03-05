@@ -2,10 +2,11 @@
 
 ---
 
-### 🟡 0.9.13
+### 🟡 0.9.17
 
-* Updated setup.py
-* Added DESCRIPTION.md
+* Corrected setup.py
+* Beautify the README.md
+* Little bugs fixed
 
 ### 🟡 0.9.1
 
