@@ -1,5 +1,4 @@
-.. image:: https://img.shields.io/pypi/v/coloratura?color=%23f6d155&label=version&style=flat-square
-:alt: Latest Version
+![Latest version](https://img.shields.io/pypi/v/coloratura?color=%23f6d155&label=version&style=flat-square)
 
 # 🦜Coloratura
 
