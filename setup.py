@@ -18,7 +18,7 @@ setup(
     author='pyblog.pl',
     author_email='rewolucjazywieniowa@gmail.com',
     description=DESCRIPTION,
-    long_description=open('README.md').read(),
+    long_description=open('DESCRIPTION.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/DawidKos/Coloratura',
     license='MIT',

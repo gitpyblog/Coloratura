@@ -8,7 +8,7 @@
 * Beautify the README.md
 * Little bugs fixed
 
-### 🟡 0.9.1
+### 🟡 0.9.11
 
 * Added long_description in setup.py
 
