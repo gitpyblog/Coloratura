@@ -4,7 +4,7 @@
 
 ##### Awsome **cprint()** function to colored terminal text. Supported full RGB! 😍
 
-### Installation
+## Installation
 
 You can install coloratura with **pip** as follows:
 
@@ -12,7 +12,7 @@ You can install coloratura with **pip** as follows:
 pip install coloratura
 ```
 
-### Usage
+## Usage
 
 First of all, get the basic cprint functions and selected color palettes:
 
