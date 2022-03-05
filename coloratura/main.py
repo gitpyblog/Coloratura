@@ -14,7 +14,7 @@ class Color:
         self.color = args
 
 
-def cprint(*text, color: Color = None, bg: Color = None, styles: list = None, sep='', end='\n') -> print:
+def cprint(*text, color: Color = None, bg: Color = None, styles: list = None, sep=' ', end='\n') -> print:
     """
     Function that returns a colored string.
 
@@ -32,7 +32,11 @@ def cprint(*text, color: Color = None, bg: Color = None, styles: list = None, se
     Returns:
         print() with a color, background color, and styles.
     """
-    update_string = sep.join(text)
+    update_string = str()
+    for element in text:
+        update_string += str(element)+sep
+
+    update_string = update_string.rstrip(sep)
 
     if color is not None:
         if color.color_space == 'rgb':
@@ -61,4 +65,4 @@ def cprint(*text, color: Color = None, bg: Color = None, styles: list = None, se
             if 'framed' == style:
                 update_string = '\033[51m' + update_string
 
-    return print(update_string, '\033[0m', sep=sep, end=end)
+    return print(update_string, '\033[0m', sep='', end=end)
