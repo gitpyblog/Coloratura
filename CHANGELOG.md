@@ -4,7 +4,7 @@
 
 ### 🟡 0.9.1
 
-* Added long_description in setup.py
+* Added DESCRIPTION.md
 
 ### 🟡 0.9.0
 
