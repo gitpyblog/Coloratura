@@ -14,7 +14,7 @@ classifiers = [
 
 setup(
     name=NAME,
-    version='0.9.1',
+    version='0.9.11',
     description='Awesome cprint() function to colored terminal text. Supported full RGB!',
     long_description=open('DESCRIPTION.md').read(),
     long_description_content_type='text/markdown',
