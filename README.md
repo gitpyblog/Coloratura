@@ -42,7 +42,7 @@ cprint('This string is italic and green', color=Bit4.GREEN, styles=['italic'])
 You can mix multiple text styles
 
 ```python
-cprint('This string is italic and bold',, styles = ['italic', 'bold'])```
+cprint('This string is italic and bold', styles = ['italic', 'bold'])```
 ```
 
 ## Colors and styles
