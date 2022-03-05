@@ -54,25 +54,41 @@ cprint('This string is italic and bold',, styles = ['italic', 'bold'])```
 **Remember:** Styles can be mixed together by including them in the list of strings
 
 ### List of all colors from the pantone palette:
->![pantone](https://img.shields.io/badge/-VERY__PERI-6868ac?style=flat-square&label=2022)
->![pantone](https://img.shields.io/badge/-ILLUMINATING-f5df4d?style=flat-square&label=2021)
->![pantone](https://img.shields.io/badge/-ULTIMATE_GRAY-97999b?style=flat-square&label=2021)
->![pantone](https://img.shields.io/badge/-CLASSIC_BLUE-0f4c81?style=flat-square&label=2020)
->![pantone](https://img.shields.io/badge/-LIVING_CORAL-ff6f61?style=flat-square&label=2019)
->![pantone](https://img.shields.io/badge/-ULTRA_VIOLET-5f4b8b?style=flat-square&label=2018)
->![pantone](https://img.shields.io/badge/-GREENERY-88b04b?style=flat-square&label=2017)
->![pantone](https://img.shields.io/badge/-ROSE_QUARTZ-f7cac9?style=flat-square&label=2016)
->![pantone](https://img.shields.io/badge/-SERENITY-92a8d1?style=flat-square&label=2016)
->![pantone](https://img.shields.io/badge/-MARSALA-955251?style=flat-square&label=2015)
->![pantone](https://img.shields.io/badge/-RADIANT__ORCHID-b565a1?style=flat-square&label=2014)
->![pantone](https://img.shields.io/badge/-TURQUOISE-45b5aa?style=flat-square&label=2010)
->![pantone](https://img.shields.io/badge/-EMERALD-009b77?style=flat-square&label=2013)
->![pantone](https://img.shields.io/badge/-TANGERINE__TANGO-e34f33?style=flat-square&label=2012)
->![pantone](https://img.shields.io/badge/-HONEYSUCKLE-d85a7b?style=flat-square&label=2011)
+
+> ![pantone](https://img.shields.io/badge/-VERY__PERI-6868ac?style=flat-square&label=2022)
+> ![pantone](https://img.shields.io/badge/-ILLUMINATING-f5df4d?style=flat-square&label=2021)
+> ![pantone](https://img.shields.io/badge/-ULTIMATE_GRAY-97999b?style=flat-square&label=2021)
+> ![pantone](https://img.shields.io/badge/-CLASSIC_BLUE-0f4c81?style=flat-square&label=2020)
+> ![pantone](https://img.shields.io/badge/-LIVING_CORAL-ff6f61?style=flat-square&label=2019)
+> ![pantone](https://img.shields.io/badge/-ULTRA_VIOLET-5f4b8b?style=flat-square&label=2018)
+> ![pantone](https://img.shields.io/badge/-GREENERY-88b04b?style=flat-square&label=2017)
+> ![pantone](https://img.shields.io/badge/-ROSE_QUARTZ-f7cac9?style=flat-square&label=2016)
+> ![pantone](https://img.shields.io/badge/-SERENITY-92a8d1?style=flat-square&label=2016)
+> ![pantone](https://img.shields.io/badge/-MARSALA-955251?style=flat-square&label=2015)
+> ![pantone](https://img.shields.io/badge/-RADIANT__ORCHID-b565a1?style=flat-square&label=2014)
+> ![pantone](https://img.shields.io/badge/-TURQUOISE-45b5aa?style=flat-square&label=2010)
+> ![pantone](https://img.shields.io/badge/-EMERALD-009b77?style=flat-square&label=2013)
+> ![pantone](https://img.shields.io/badge/-TANGERINE__TANGO-e34f33?style=flat-square&label=2012)
+> ![pantone](https://img.shields.io/badge/-HONEYSUCKLE-d85a7b?style=flat-square&label=2011)
 
 ### List of all colors from the 4bit palette
 
-> BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, BRIGHT_BLACK, BRIGHT_RED, BRIGHT_GREEN, BRIGHT_YELLOW, BRIGHT_BLUE, BRIGHT_MAGENTA, BRIGHT_CYAN, BRIGHT_WHITE
+>![Bit4](https://img.shields.io/badge/-BLACK-0c0c0c?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-RED-aa0000?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-GREEN-00aa00?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-YELLOW-aa5500?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-BLUE-0000aa?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-MAGENTA-aa00aa?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-CYAN-00aaaa?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-WHITE-f0f0f0?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-BRIGHT__BLACK-555555?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-BRIGHT__RED-ff5555?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-BRIGHT__GREEN-55ff55?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-BRIGHT__YELLOW-ffff55?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-BRIGHT__BLUE-5555ff?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-BRIGHT__MAGENTA-ff55ff?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-BRIGHT__CYAN-55ffff?style=flat-square)
+>![Bit4](https://img.shields.io/badge/-BRIGHT__WHITE-ffffff?style=flat-square)
 
 **Too little? 🤔**
 
