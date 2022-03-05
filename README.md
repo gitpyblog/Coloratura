@@ -100,5 +100,7 @@ Look how simple it is:
 ```python
 CUSTOM_COLOR = Color('rgb', 191, 25, 50)
 ```
+> ![custom](https://img.shields.io/badge/-CUSTOM_COLOR-bf1932?style=flat-square&label=2011)
+
 
 ### *..and this is just the beginning of this great library!* 💚
