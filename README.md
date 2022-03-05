@@ -71,25 +71,25 @@ cprint('This string is italic and bold',, styles = ['italic', 'bold'])```
 > ![pantone](https://img.shields.io/badge/-TANGERINE__TANGO-e34f33?style=flat-square&label=2012)
 > ![pantone](https://img.shields.io/badge/-HONEYSUCKLE-d85a7b?style=flat-square&label=2011)
 
-### List of all colors from the 4bit palette
+### List of all colors from the 4bit palette:
 
->![Bit4](https://img.shields.io/badge/-BLACK-0c0c0c?style=flat-square)
->![Bit4](https://img.shields.io/badge/-RED-aa0000?style=flat-square)
->![Bit4](https://img.shields.io/badge/-GREEN-00aa00?style=flat-square)
->![Bit4](https://img.shields.io/badge/-YELLOW-aa5500?style=flat-square)
->![Bit4](https://img.shields.io/badge/-BLUE-0000aa?style=flat-square)
->![Bit4](https://img.shields.io/badge/-MAGENTA-aa00aa?style=flat-square)
->![Bit4](https://img.shields.io/badge/-CYAN-00aaaa?style=flat-square)
->![Bit4](https://img.shields.io/badge/-WHITE-f0f0f0?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-BLACK-0c0c0c?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-RED-aa0000?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-GREEN-00aa00?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-YELLOW-aa5500?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-BLUE-0000aa?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-MAGENTA-aa00aa?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-CYAN-00aaaa?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-WHITE-f0f0f0?style=flat-square)
 >
 >![Bit4](https://img.shields.io/badge/-BRIGHT__BLACK-555555?style=flat-square)
->![Bit4](https://img.shields.io/badge/-BRIGHT__RED-ff5555?style=flat-square)
->![Bit4](https://img.shields.io/badge/-BRIGHT__GREEN-55ff55?style=flat-square)
->![Bit4](https://img.shields.io/badge/-BRIGHT__YELLOW-ffff55?style=flat-square)
->![Bit4](https://img.shields.io/badge/-BRIGHT__BLUE-5555ff?style=flat-square)
->![Bit4](https://img.shields.io/badge/-BRIGHT__MAGENTA-ff55ff?style=flat-square)
->![Bit4](https://img.shields.io/badge/-BRIGHT__CYAN-55ffff?style=flat-square)
->![Bit4](https://img.shields.io/badge/-BRIGHT__WHITE-ffffff?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-BRIGHT__RED-ff5555?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-BRIGHT__GREEN-55ff55?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-BRIGHT__YELLOW-ffff55?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-BRIGHT__BLUE-5555ff?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-BRIGHT__MAGENTA-ff55ff?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-BRIGHT__CYAN-55ffff?style=flat-square)
+> ![Bit4](https://img.shields.io/badge/-BRIGHT__WHITE-ffffff?style=flat-square)
 
 **Too little? ðŸ¤”**
 
@@ -98,7 +98,7 @@ With the Color class you can define your own colors in the full RGB spectrum ðŸ¤
 Look how simple it is:
 
 ```python
-YOUR_COLOR = Color('rgb', 191, 25, 50)
+CUSTOM_COLOR = Color('rgb', 191, 25, 50)
 ```
 
 **Note:** Windows versions below Windows 10 do not support ANSI escape sequences so the colors will not be printed in
