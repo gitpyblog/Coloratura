@@ -1,3 +1,5 @@
+![Latest version](https://img.shields.io/pypi/v/coloratura?color=%23f6d155&label=version&style=flat-square)
+
 # Coloratura
 
 ##### Awsome **cprint()** function to colored terminal text. Supported full RGB!
