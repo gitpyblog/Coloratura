@@ -101,7 +101,4 @@ Look how simple it is:
 CUSTOM_COLOR = Color('rgb', 191, 25, 50)
 ```
 
-**Note:** Windows versions below Windows 10 do not support ANSI escape sequences so the colors will not be printed in
-command prompt.
-
 ### *..and this is just the beginning of this great library!* 💚
