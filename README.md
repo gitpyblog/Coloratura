@@ -60,7 +60,7 @@ cprint('This string is italic and bold',, styles = ['italic', 'bold'])```
 > BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, BRIGHT_BLACK, BRIGHT_RED, BRIGHT_GREEN, BRIGHT_YELLOW, BRIGHT_BLUE, BRIGHT_MAGENTA, BRIGHT_CYAN, BRIGHT_WHITE
 
 **Too little? 🤔**
-With the Color class you can define your own colors in the full RGB spectrum 😍
+With the Color class you can define your own colors in the full RGB spectrum 🤯
 
 Look how simple it is:
 
