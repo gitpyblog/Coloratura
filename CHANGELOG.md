@@ -1,7 +1,7 @@
 # 🐦CHANGELOG
 
 ---
-### 🐛 0.9.3
+### 🐛 0.9.30
 * Fixed a dictionaries bug in cprint()
 
 ### 🟡 0.9.17
