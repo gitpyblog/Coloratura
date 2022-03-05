@@ -8,10 +8,8 @@ CLASSIFIERS = [
     'Intended Audience :: Developers',
     'Programming Language :: Python :: 3',
     'License :: OSI Approved :: MIT License',
-    'Operating System :: UNIX',
-    'Operating System :: MacOS :: MacOS X',
-    'Operating System :: Windows :: Windows',
-    'Environment :: Console',
+    'Programming Language :: Python',
+    'Environment :: Plugins',
 ]
 
 setup(
