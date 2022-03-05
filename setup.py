@@ -14,7 +14,7 @@ classifiers = [
 
 setup(
     name=NAME,
-    version='0.9.0',
+    version='0.9.1',
     description='Awesome cprint() function to colored terminal text. Supported full RGB!',
     long_description=open('README.md').read(),
     keywords='color colour terminal text ansi windows colorama hue',
