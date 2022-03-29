@@ -44,7 +44,8 @@ class Bit4:
     BRIGHT_CYAN = Color('bit4', 96)
     BRIGHT_WHITE = Color('bit4', 97)
 
-class MaterialUI:
+
+class Material:
     """Material UI colors"""
     RED_50 = Color('rgb', 255, 235, 238)
     RED_100 = Color('rgb', 255, 205, 210)
@@ -60,7 +61,7 @@ class MaterialUI:
     RED_A200 = Color('rgb', 255, 82, 82)
     RED_A400 = Color('rgb', 255, 23, 68)
     RED_A700 = Color('rgb', 213, 0, 0)
-    
+
     PINK_50 = Color('rgb', 252, 228, 236)
     PINK_100 = Color('rgb', 248, 187, 208)
     PINK_200 = Color('rgb', 244, 143, 177)
@@ -75,7 +76,7 @@ class MaterialUI:
     PINK_A200 = Color('rgb', 255, 64, 129)
     PINK_A400 = Color('rgb', 245, 0, 87)
     PINK_A700 = Color('rgb', 197, 17, 98)
-    
+
     PURPLE_50 = Color('rgb', 243, 229, 245)
     PURPLE_100 = Color('rgb', 225, 190, 231)
     PURPLE_200 = Color('rgb', 206, 147, 216)
@@ -90,7 +91,7 @@ class MaterialUI:
     PURPLE_A200 = Color('rgb', 224, 64, 251)
     PURPLE_A400 = Color('rgb', 213, 0, 249)
     PURPLE_A700 = Color('rgb', 170, 0, 255)
-    
+
     DEEP_PURPLE_50 = Color('rgb', 237, 231, 246)
     DEEP_PURPLE_100 = Color('rgb', 179, 157, 219)
     DEEP_PURPLE_200 = Color('rgb', 149, 117, 205)
@@ -105,7 +106,7 @@ class MaterialUI:
     DEEP_PURPLE_A200 = Color('rgb', 124, 77, 255)
     DEEP_PURPLE_A400 = Color('rgb', 101, 31, 255)
     DEEP_PURPLE_A700 = Color('rgb', 98, 0, 234)
-    
+
     INDIGO_50 = Color('rgb', 232, 234, 246)
     INDIGO_100 = Color('rgb', 197, 202, 233)
     INDIGO_200 = Color('rgb', 159, 168, 218)
@@ -120,7 +121,7 @@ class MaterialUI:
     INDIGO_A200 = Color('rgb', 83, 109, 254)
     INDIGO_A400 = Color('rgb', 61, 90, 254)
     INDIGO_A700 = Color('rgb', 48, 79, 254)
-    
+
     BLUE_50 = Color('rgb', 227, 242, 253)
     BLUE_100 = Color('rgb', 187, 222, 251)
     BLUE_200 = Color('rgb', 144, 202, 249)
@@ -135,7 +136,7 @@ class MaterialUI:
     BLUE_A200 = Color('rgb', 68, 138, 255)
     BLUE_A400 = Color('rgb', 41, 121, 255)
     BLUE_A700 = Color('rgb', 41, 98, 255)
-    
+
     LIGHT_BLUE_50 = Color('rgb', 225, 245, 254)
     LIGHT_BLUE_100 = Color('rgb', 179, 229, 252)
     LIGHT_BLUE_200 = Color('rgb', 129, 212, 250)
@@ -150,7 +151,7 @@ class MaterialUI:
     LIGHT_BLUE_A200 = Color('rgb', 64, 196, 255)
     LIGHT_BLUE_A400 = Color('rgb', 0, 176, 255)
     LIGHT_BLUE_A700 = Color('rgb', 0, 145, 234)
-    
+
     CYAN_50 = Color('rgb', 224, 247, 250)
     CYAN_100 = Color('rgb', 178, 235, 242)
     CYAN_200 = Color('rgb', 128, 222, 234)
@@ -165,7 +166,7 @@ class MaterialUI:
     CYAN_A200 = Color('rgb', 24, 255, 255)
     CYAN_A400 = Color('rgb', 0, 229, 255)
     CYAN_A700 = Color('rgb', 0, 184, 212)
-    
+
     TEAL_50 = Color('rgb', 224, 242, 241)
     TEAL_100 = Color('rgb', 178, 223, 219)
     TEAL_200 = Color('rgb', 128, 203, 196)
@@ -180,7 +181,7 @@ class MaterialUI:
     TEAL_A200 = Color('rgb', 100, 255, 218)
     TEAL_A400 = Color('rgb', 29, 233, 182)
     TEAL_A700 = Color('rgb', 0, 191, 165)
-    
+
     GREEN_50 = Color('rgb', 232, 245, 233)
     GREEN_100 = Color('rgb', 200, 230, 201)
     GREEN_200 = Color('rgb', 165, 214, 167)
@@ -195,7 +196,7 @@ class MaterialUI:
     GREEN_A200 = Color('rgb', 105, 240, 174)
     GREEN_A400 = Color('rgb', 0, 230, 118)
     GREEN_A700 = Color('rgb', 0, 200, 83)
-    
+
     LIGHT_GREEN_50 = Color('rgb', 241, 248, 233)
     LIGHT_GREEN_100 = Color('rgb', 220, 237, 200)
     LIGHT_GREEN_200 = Color('rgb', 197, 225, 165)
@@ -210,7 +211,7 @@ class MaterialUI:
     LIGHT_GREEN_A200 = Color('rgb', 178, 255, 89)
     LIGHT_GREEN_A400 = Color('rgb', 118, 255, 3)
     LIGHT_GREEN_A700 = Color('rgb', 100, 221, 23)
-    
+
     LIME_50 = Color('rgb', 249, 251, 231)
     LIME_100 = Color('rgb', 240, 244, 195)
     LIME_200 = Color('rgb', 230, 238, 156)
@@ -225,7 +226,7 @@ class MaterialUI:
     LIME_A200 = Color('rgb', 238, 255, 65)
     LIME_A400 = Color('rgb', 198, 255, 0)
     LIME_A700 = Color('rgb', 174, 234, 0)
-    
+
     YELLOW_50 = Color('rgb', 255, 253, 231)
     YELLOW_100 = Color('rgb', 255, 249, 196)
     YELLOW_200 = Color('rgb', 255, 245, 157)
@@ -240,7 +241,7 @@ class MaterialUI:
     YELLOW_A200 = Color('rgb', 255, 255, 0)
     YELLOW_A400 = Color('rgb', 255, 234, 0)
     YELLOW_A700 = Color('rgb', 255, 214, 0)
-    
+
     AMBER_50 = Color('rgb', 255, 248, 225)
     AMBER_100 = Color('rgb', 255, 236, 179)
     AMBER_200 = Color('rgb', 255, 224, 130)
@@ -255,7 +256,7 @@ class MaterialUI:
     AMBER_A200 = Color('rgb', 255, 215, 64)
     AMBER_A400 = Color('rgb', 255, 196, 0)
     AMBER_A700 = Color('rgb', 255, 171, 0)
-    
+
     ORANGE_50 = Color('rgb', 255, 243, 224)
     ORANGE_100 = Color('rgb', 255, 224, 178)
     ORANGE_200 = Color('rgb', 255, 204, 128)
@@ -270,7 +271,7 @@ class MaterialUI:
     ORANGE_A200 = Color('rgb', 255, 171, 64)
     ORANGE_A400 = Color('rgb', 255, 145, 0)
     ORANGE_A700 = Color('rgb', 255, 109, 0)
-    
+
     DEEP_ORANGE_50 = Color('rgb', 251, 233, 231)
     DEEP_ORANGE_100 = Color('rgb', 255, 204, 188)
     DEEP_ORANGE_200 = Color('rgb', 255, 171, 145)
@@ -285,7 +286,7 @@ class MaterialUI:
     DEEP_ORANGE_A200 = Color('rgb', 255, 110, 64)
     DEEP_ORANGE_A400 = Color('rgb', 255, 61, 0)
     DEEP_ORANGE_A700 = Color('rgb', 221, 44, 0)
-    
+
     BROWN_50 = Color('rgb', 239, 235, 233)
     BROWN_100 = Color('rgb', 215, 204, 200)
     BROWN_200 = Color('rgb', 188, 170, 164)
@@ -296,7 +297,7 @@ class MaterialUI:
     BROWN_700 = Color('rgb', 93, 64, 55)
     BROWN_800 = Color('rgb', 78, 52, 46)
     BROWN_900 = Color('rgb', 62, 39, 35)
-    
+
     GREY_50 = Color('rgb', 250, 250, 250)
     GREY_100 = Color('rgb', 245, 245, 245)
     GREY_200 = Color('rgb', 238, 238, 238)
@@ -307,7 +308,7 @@ class MaterialUI:
     GREY_700 = Color('rgb', 97, 97, 97)
     GREY_800 = Color('rgb', 66, 66, 66)
     GREY_900 = Color('rgb', 33, 33, 33)
-    
+
     BLUE_GREY_50 = Color('rgb', 236, 239, 241)
     BLUE_GREY_100 = Color('rgb', 207, 216, 220)
     BLUE_GREY_200 = Color('rgb', 176, 190, 197)
