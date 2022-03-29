@@ -1,6 +1,10 @@
 # 🐦CHANGELOG
 
 ---
+
+### 🐛 0.9.35
+* Fixed typing bug
+
 ### 🐛 0.9.30
 * Fixed a dictionaries bug in cprint()
 

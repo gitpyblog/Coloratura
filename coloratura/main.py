@@ -1,5 +1,8 @@
+from typing import Union
+
+
 class Color:
-    def __init__(self, color_space: str | None, *args: any):
+    def __init__(self, color_space: Union[str, None], *args: any):
         """
         With this class you can create your own custom colors.
 
