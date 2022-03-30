@@ -1,4 +1,4 @@
-from coloratura import Color
+from coloratura import Color, cprint
 
 
 class Reset:
@@ -319,3 +319,88 @@ class Material:
     BLUE_GREY_700 = Color('rgb', 69, 90, 100)
     BLUE_GREY_800 = Color('rgb', 55, 71, 79)
     BLUE_GREY_900 = Color('rgb', 38, 50, 56)
+
+    @staticmethod
+    def palette():
+        width = 8
+        color_names = 'RED', 'PINK', 'PURPLE', 'DEEP_PURPLE', 'INDIGO', 'BLUE', 'LIGHT_BLUE', 'CYAN', 'TEAL', 'GREEN', \
+                      'LIGHT_GREEN', 'LIME', 'YELLOW', 'AMBER', 'ORANGE', 'DEEP_ORANGE', 'BROWN', 'GREY', 'BLUE_GREY'
+
+        color_codes = 100, 200, 300, 400, 500, 600, 700, 800, 900, 'A100', 'A200', 'A400', 'A700'
+
+        def color_name():
+            line_label_first = list()
+            line_label_second = list()
+
+            for color in color_names:
+                if '_' in color:
+                    color = color.split('_')
+                    line_label_first.append(color[0].ljust(width).lower())
+                    line_label_second.append(color[1].ljust(width).lower())
+                else:
+                    line_label_first.append(''.ljust(width).lower())
+                    line_label_second.append(color.ljust(width).lower())
+
+            print(''.ljust(width), ''.join(line_label_first))
+            print(''.ljust(width), ''.join(line_label_second))
+
+        color_name()
+
+        def color_code(code, a=False):
+            color_list = color_names
+            if a is True:
+                color_list = color_list[:-3]
+
+            cprint(f'{code} '.rjust(width), end='')
+            for color in color_list:
+                cprint(''.center(width), bg=getattr(Material, f'{color}_{code}'), end='')
+            print('')
+
+        for c in color_codes:
+            if str(c).startswith('A'):
+                color_code(c, a=True)
+            else:
+                color_code(c)
+
+
+class Social:
+    """Popular social media colors"""
+    FACEBOOK = Color('rgb', 24, 119, 242)
+    DROPBOX = Color('rgb', 0, 97, 255)
+    TUMBLR = Color('rgb', 52, 70, 93)
+    QUORA = Color('rgb', 185, 43, 39)
+    SOUNDCLOUD = Color('rgb', 255, 51, 0)
+    LINE = Color('rgb', 0, 195, 0)
+    DRIBBBLE = Color('rgb', 234, 76, 137)
+    MESSENGER = Color('rgb', 0, 153, 255)
+    WORDPRESS = Color('rgb', 33, 117, 155)
+    YAHOO = Color('rgb', 65, 0, 147)
+    YELP = Color('rgb', 175, 6, 6)
+    BLOGGER = Color('rgb', 245, 125, 0)
+    MEDIUM = Color('rgb', 2, 184, 117)
+    FLICKR = Color('rgb', 255, 0, 132)
+    TWITTER = Color('rgb', 29, 161, 242)
+    VIMEO = Color('rgb', 26, 183, 234)
+    PINTEREST = Color('rgb', 189, 8, 28)
+    WEIBO = Color('rgb', 223, 32, 41)
+    SNAPCHAT = Color('rgb', 255, 252, 0)
+    VINE = Color('rgb', 0, 180, 137)
+    FOURSQUARE = Color('rgb', 249, 72, 119)
+    LINKEDIN = Color('rgb', 10, 102, 194)
+    SLIDESHARE = Color('rgb', 0, 119, 181)
+    YOTUBE = Color('rgb', 205, 32, 31)
+    PRODUCTHUNT = Color('rgb', 218, 85, 47)
+    WHATSAPP = Color('rgb', 37, 211, 102)
+    SLACK = Color('rgb', 58, 175, 133)
+    TIKTOK = Color('rgb', 238, 29, 81)
+    SKYPE = Color('rgb', 0, 175, 240)
+    VK = Color('rgb', 76, 117, 163)
+    REDDIT = Color('rgb', 255, 87, 0)
+    HACKERSNEWS = Color('rgb', 255, 102, 0)
+    WECHAT = Color('rgb', 9, 184, 62)
+    INSTAGRAM = Color('rgb', 228, 64, 95)
+    BEHANCE = Color('rgb', 19, 20, 24)
+
+    @staticmethod
+    def show_colors():
+        return ' '.join([i for i in Social.__dict__.keys()][2:-3])
