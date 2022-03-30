@@ -332,11 +332,11 @@ class Material:
         for color in color_names:
             if '_' in color:
                 color = color.split('_')
-                line_label_first.append(color[0].ljust(width).lower())
-                line_label_second.append(color[1].ljust(width).lower())
+                line_label_first.append(color[0].ljust(width).title())
+                line_label_second.append(color[1].ljust(width).title())
             else:
-                line_label_first.append(''.ljust(width).lower())
-                line_label_second.append(color.ljust(width).lower())
+                line_label_first.append(''.ljust(width).title())
+                line_label_second.append(color.ljust(width).title())
 
         cprint(''.ljust(width), ''.join(line_label_first), sep='')
         cprint(''.ljust(width), ''.join(line_label_second), sep='')
