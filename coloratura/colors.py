@@ -1,4 +1,4 @@
-from coloratura import Color
+from coloratura import Color, cprint
 
 
 class Reset:
