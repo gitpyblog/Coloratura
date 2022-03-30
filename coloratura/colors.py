@@ -96,13 +96,13 @@ class Flat:
         cprint('NEMPHRITIS'.center(15), color=Flat.MIDNIGHTBLUE, bg=Flat.NEMPHRITIS, end='')
         cprint('BELIZEHOLE'.center(15), color=Flat.SILVER, bg=Flat.BELIZEHOLE, end='')
         cprint('WISTERIA'.center(15), color=Flat.CLOUDS, bg=Flat.WISTERIA, end='')
-        cprint('MIDNIGHTBLUE'.center(15), color=Flat.ASBESTOS, bg=Flat.MIDNIGHTBLUE)
+        cprint('MIDNIGHTBLUE'.center(15), color=Flat.CONCRETE, bg=Flat.MIDNIGHTBLUE)
 
         cprint('SUNFLOWER'.center(15), color=Flat.PUMPKIN, bg=Flat.SUNFLOWER, end='')
         cprint('CARROT'.center(15), color=Flat.POMEGRANATE, bg=Flat.CARROT, end='')
         cprint('ALIZARIN'.center(15), color=Flat.ORANGE, bg=Flat.ALIZARIN, end='')
         cprint('CLOUDS'.center(15), color=Flat.CONCRETE, bg=Flat.CLOUDS, end='')
-        cprint('CONCRETE'.center(15), color=Flat.CLOUDS, bg=Flat.CONCRETE)
+        cprint('CONCRETE'.center(15), color=Flat.MIDNIGHTBLUE, bg=Flat.CONCRETE)
 
         cprint('ORANGE'.center(15), color=Flat.ALIZARIN, bg=Flat.ORANGE, end='')
         cprint('PUMPKIN'.center(15), color=Flat.SUNFLOWER, bg=Flat.PUMPKIN, end='')
@@ -391,7 +391,7 @@ class Material:
         width = 7
         color_names = 'RED', 'PINK', 'PURPLE', 'DEEP_PURPLE', 'INDIGO', 'BLUE', 'LIGHT_BLUE', 'CYAN', 'TEAL', 'GREEN', \
                       'LIGHT_GREEN', 'LIME', 'YELLOW', 'AMBER', 'ORANGE', 'DEEP_ORANGE', 'BROWN', 'GREY', 'BLUE_GREY'
-        color_codes = 100, 200, 300, 400, 500, 600, 700, 800, 900, 'A100', 'A200', 'A400', 'A700'
+        color_codes = 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 'A100', 'A200', 'A400', 'A700'
         line_label_first = list()
         line_label_second = list()
 
