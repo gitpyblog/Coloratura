@@ -1,4 +1,4 @@
-from main import Color
+from coloratura import Color
 
 
 class Reset:
