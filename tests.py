@@ -73,46 +73,5 @@ def colors(palette):
 # cprint('Ala ma psa', styles=['bold', 'italic', 'framed'])
 
 
-# def show_palette():
-#     s = 8
-#     color_names = 'RED', 'PINK', 'PURPLE', 'DEEP_PURPLE', 'INDIGO', 'BLUE', 'LIGHT_BLUE', 'CYAN', 'TEAL', 'GREEN', \
-#                   'LIGHT_GREEN', 'LIME', 'YELLOW', 'AMBER', 'ORANGE', 'DEEP_ORANGE', 'BROWN', 'GREY', 'BLUE_GREY'
-#
-#     color_codes = 100, 200, 300, 400, 500, 600, 700, 800, 900, 'A100', 'A200', 'A400', 'A700'
-#
-#     def color_name():
-#         line_label_first = list()
-#         line_label_second = list()
-#
-#         for color in color_names:
-#             if '_' in color:
-#                 color = color.split('_')
-#                 line_label_first.append(color[0].ljust(s).lower())
-#                 line_label_second.append(color[1].ljust(s).lower())
-#             else:
-#                 line_label_first.append(''.ljust(s).lower())
-#                 line_label_second.append(color.ljust(s).lower())
-#
-#         print(''.ljust(s), ''.join(line_label_first))
-#         print(''.ljust(s), ''.join(line_label_second))
-#
-#     color_name()
-#
-#     def color_code(code, a=False):
-#         color_list = color_names
-#         if a is True:
-#             color_list = color_list[:-3]
-#
-#         cprint(f'{code} '.rjust(s), end='')
-#         for color in color_list:
-#             cprint(''.center(s), bg=getattr(Material, f'{color}_{code}'), end='')
-#         print('')
-#
-#     for c in color_codes:
-#         if str(c).startswith('A'):
-#             color_code(c, a=True)
-#         else:
-#             color_code(c)
-
 Material.palette()
 Social.palette()
