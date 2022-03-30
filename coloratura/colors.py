@@ -1,4 +1,4 @@
-from coloratura import Color
+from coloratura import Color, cprint
 
 
 class Pantone:
@@ -313,3 +313,45 @@ class Material:
     BLUE_GREY_700 = Color('rgb', 69, 90, 100)
     BLUE_GREY_800 = Color('rgb', 55, 71, 79)
     BLUE_GREY_900 = Color('rgb', 38, 50, 56)
+
+    @staticmethod
+    def palette():
+        width = 8
+        color_names = 'RED', 'PINK', 'PURPLE', 'DEEP_PURPLE', 'INDIGO', 'BLUE', 'LIGHT_BLUE', 'CYAN', 'TEAL', 'GREEN', \
+                      'LIGHT_GREEN', 'LIME', 'YELLOW', 'AMBER', 'ORANGE', 'DEEP_ORANGE', 'BROWN', 'GREY', 'BLUE_GREY'
+
+        color_codes = 100, 200, 300, 400, 500, 600, 700, 800, 900, 'A100', 'A200', 'A400', 'A700'
+
+        def color_name():
+            line_label_first = list()
+            line_label_second = list()
+
+            for color in color_names:
+                if '_' in color:
+                    color = color.split('_')
+                    line_label_first.append(color[0].ljust(width).lower())
+                    line_label_second.append(color[1].ljust(width).lower())
+                else:
+                    line_label_first.append(''.ljust(width).lower())
+                    line_label_second.append(color.ljust(width).lower())
+
+            print(''.ljust(width), ''.join(line_label_first))
+            print(''.ljust(width), ''.join(line_label_second))
+
+        color_name()
+
+        def color_code(code, a=False):
+            color_list = color_names
+            if a is True:
+                color_list = color_list[:-3]
+
+            cprint(f'{code} '.rjust(width), end='')
+            for color in color_list:
+                cprint(''.center(width), bg=getattr(Material, f'{color}_{code}'), end='')
+            print('')
+
+        for c in color_codes:
+            if str(c).startswith('A'):
+                color_code(c, a=True)
+            else:
+                color_code(c)
