@@ -56,6 +56,10 @@ class Bit4:
     BRIGHT_CYAN = Color('bit4', 96)
     BRIGHT_WHITE = Color('bit4', 97)
 
+    @staticmethod
+    def palette():
+        ...
+
 
 class Flat:
     """Flat colors"""
