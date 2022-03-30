@@ -388,7 +388,7 @@ class Social:
     FOURSQUARE = Color('rgb', 249, 72, 119)
     LINKEDIN = Color('rgb', 10, 102, 194)
     SLIDESHARE = Color('rgb', 0, 119, 181)
-    YOTUBE = Color('rgb', 205, 32, 31)
+    YOUTUBE = Color('rgb', 205, 32, 31)
     PRODUCTHUNT = Color('rgb', 218, 85, 47)
     WHATSAPP = Color('rgb', 37, 211, 102)
     SLACK = Color('rgb', 58, 175, 133)
@@ -396,11 +396,11 @@ class Social:
     SKYPE = Color('rgb', 0, 175, 240)
     VK = Color('rgb', 76, 117, 163)
     REDDIT = Color('rgb', 255, 87, 0)
-    HACKERSNEWS = Color('rgb', 255, 102, 0)
+    HACKERNEWS = Color('rgb', 255, 102, 0)
     WECHAT = Color('rgb', 9, 184, 62)
     INSTAGRAM = Color('rgb', 228, 64, 95)
     BEHANCE = Color('rgb', 19, 20, 24)
 
     @staticmethod
-    def show_colors():
+    def palette():
         return ' '.join([i for i in Social.__dict__.keys()][2:-3])
