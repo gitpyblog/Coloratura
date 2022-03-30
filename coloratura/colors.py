@@ -322,29 +322,24 @@ class Material:
 
     @staticmethod
     def palette():
-        width = 8
+        width = 7
         color_names = 'RED', 'PINK', 'PURPLE', 'DEEP_PURPLE', 'INDIGO', 'BLUE', 'LIGHT_BLUE', 'CYAN', 'TEAL', 'GREEN', \
                       'LIGHT_GREEN', 'LIME', 'YELLOW', 'AMBER', 'ORANGE', 'DEEP_ORANGE', 'BROWN', 'GREY', 'BLUE_GREY'
-
         color_codes = 100, 200, 300, 400, 500, 600, 700, 800, 900, 'A100', 'A200', 'A400', 'A700'
+        line_label_first = list()
+        line_label_second = list()
 
-        def color_name():
-            line_label_first = list()
-            line_label_second = list()
+        for color in color_names:
+            if '_' in color:
+                color = color.split('_')
+                line_label_first.append(color[0].ljust(width).lower())
+                line_label_second.append(color[1].ljust(width).lower())
+            else:
+                line_label_first.append(''.ljust(width).lower())
+                line_label_second.append(color.ljust(width).lower())
 
-            for color in color_names:
-                if '_' in color:
-                    color = color.split('_')
-                    line_label_first.append(color[0].ljust(width).lower())
-                    line_label_second.append(color[1].ljust(width).lower())
-                else:
-                    line_label_first.append(''.ljust(width).lower())
-                    line_label_second.append(color.ljust(width).lower())
-
-            print(''.ljust(width), ''.join(line_label_first))
-            print(''.ljust(width), ''.join(line_label_second))
-
-        color_name()
+        cprint(''.ljust(width), ''.join(line_label_first), sep='')
+        cprint(''.ljust(width), ''.join(line_label_second), sep='')
 
         def color_code(code, a=False):
             color_list = color_names
@@ -352,8 +347,8 @@ class Material:
                 color_list = color_list[:-3]
 
             cprint(f'{code} '.rjust(width), end='')
-            for color in color_list:
-                cprint(''.center(width), bg=getattr(Material, f'{color}_{code}'), end='')
+            for i in color_list:
+                cprint(''.center(width), bg=getattr(Material, f'{i}_{code}'), end='')
             print('')
 
         for c in color_codes:
