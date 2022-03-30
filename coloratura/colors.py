@@ -107,7 +107,6 @@ class Flat:
         cprint('ASBESTOS'.center(15), color=Flat.WETASPHALT, bg=Flat.ASBESTOS)
 
 
-
 class Material:
     """Material UI colors"""
     RED_50 = Color('rgb', 255, 235, 238)
