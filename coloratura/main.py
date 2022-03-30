@@ -67,9 +67,7 @@ def cprint(*text, color: Color = None, bg: Color = None, styles: list = None, se
             'crossed-out': '\033[9m',
             'framed': '\033[51m'
         }
-        # for style in styles:
-        #     if style in decorations:
-        #         update_string = f'{decorations[style]}{update_string}'
+
         update_string = ''.join([f'{decorations[style]}' if style in decorations else '' for style in styles]) + update_string
 
     return print(f'{update_string}\033[0m', sep=sep, end=end)
