@@ -24,6 +24,18 @@ class Pantone:
     HONEYSUCKLE = Color('rgb', 216, 90, 123)  # 2011 - Color of the year
     TURQUOISE = Color('rgb', 96, 181, 170)  # 2010 - Color of the year
 
+    @staticmethod
+    def palette():
+        colors_of_the_year = ('ILLUMINATING', 2021), ('ULTIMATE_GRAY', 2021), ('CLASSIC_BLUE', 2020), \
+                             ('LIVING_CORAL', 2019), ('ULTRA_VIOLET', 2018), ('GREENERY', 2017), ('ROSE_QUARTZ', 2016), \
+                             ('SERENITY', 2016), ('MARSALA', 2015), ('RADIANT_ORCHID', 2014), ('EMERALD', 2013), \
+                             ('TANGERINE_TANGO', 2012), ('HONEYSUCKLE', 2011), ('TURQUOISE', 2010)
+
+        for i in colors_of_the_year:
+            cprint(i[0].rjust(15), styles=['bold'], end=' ')
+            cprint(''.ljust(15), bg=getattr(Pantone, i[0]), end='  ')
+            cprint(f'{i[1]} - Color of the year', color=Pantone.ULTIMATE_GRAY)
+
 
 class Bit4:
     """4 BIT colors"""

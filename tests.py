@@ -1,4 +1,4 @@
-from coloratura import cprint, Pantone, Bit4, Material, Social
+from coloratura import cprint, Pantone, Bit4, Social, Material
 
 
 def test_string():
@@ -73,5 +73,7 @@ def colors(palette):
 # cprint('Ala ma psa', styles=['bold', 'italic', 'framed'])
 
 
-Material.palette()
-Social.palette()
+# Material.palette()
+# Material.palette()
+
+Pantone.palette()
