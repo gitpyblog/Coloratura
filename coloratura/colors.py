@@ -32,7 +32,7 @@ class Pantone:
                              ('TANGERINE_TANGO', 2012), ('HONEYSUCKLE', 2011), ('TURQUOISE', 2010)
 
         for i in colors_of_the_year:
-            cprint(i[0].rjust(15), styles=['bold'], end=' ')
+            cprint(i[0].rjust(15), styles=['bold'], end='  ')
             cprint(''.ljust(15), bg=getattr(Pantone, i[0]), end='  ')
             cprint(f'{i[1]} - Color of the year', color=Pantone.ULTIMATE_GRAY)
 
@@ -105,8 +105,8 @@ class Material:
     PURPLE_A700 = Color('rgb', 170, 0, 255)
 
     DEEP_PURPLE_50 = Color('rgb', 237, 231, 246)
-    DEEP_PURPLE_100 = Color('rgb', 179, 157, 219)
-    DEEP_PURPLE_200 = Color('rgb', 149, 117, 205)
+    DEEP_PURPLE_100 = Color('rgb', 209, 196, 233)
+    DEEP_PURPLE_200 = Color('rgb', 179, 157, 219)
     DEEP_PURPLE_300 = Color('rgb', 149, 117, 205)
     DEEP_PURPLE_400 = Color('rgb', 126, 87, 194)
     DEEP_PURPLE_500 = Color('rgb', 103, 58, 183)
@@ -199,7 +199,7 @@ class Material:
     GREEN_200 = Color('rgb', 165, 214, 167)
     GREEN_300 = Color('rgb', 129, 199, 132)
     GREEN_400 = Color('rgb', 102, 187, 106)
-    GREEN_500 = Color('rgb', 102, 187, 106)
+    GREEN_500 = Color('rgb', 76, 175, 80)
     GREEN_600 = Color('rgb', 67, 160, 71)
     GREEN_700 = Color('rgb', 56, 142, 60)
     GREEN_800 = Color('rgb', 46, 125, 50)

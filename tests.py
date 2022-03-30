@@ -1,4 +1,4 @@
-from coloratura import cprint, Pantone, Bit4, Social, Material
+from coloratura import cprint, Pantone, Bit4, Material
 
 
 def test_string():
@@ -74,6 +74,7 @@ def colors(palette):
 
 
 # Material.palette()
-# Material.palette()
-
+print('')
+Material.palette()
+print('')
 Pantone.palette()
