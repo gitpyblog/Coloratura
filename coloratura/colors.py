@@ -24,6 +24,18 @@ class Pantone:
     HONEYSUCKLE = Color('rgb', 216, 90, 123)  # 2011 - Color of the year
     TURQUOISE = Color('rgb', 96, 181, 170)  # 2010 - Color of the year
 
+    @staticmethod
+    def palette():
+        colors_of_the_year = ('ILLUMINATING', 2021), ('ULTIMATE_GRAY', 2021), ('CLASSIC_BLUE', 2020), \
+                             ('LIVING_CORAL', 2019), ('ULTRA_VIOLET', 2018), ('GREENERY', 2017), ('ROSE_QUARTZ', 2016), \
+                             ('SERENITY', 2016), ('MARSALA', 2015), ('RADIANT_ORCHID', 2014), ('EMERALD', 2013), \
+                             ('TANGERINE_TANGO', 2012), ('HONEYSUCKLE', 2011), ('TURQUOISE', 2010)
+
+        for i in colors_of_the_year:
+            cprint(i[0].rjust(15), styles=['bold'], end=' ')
+            cprint(''.ljust(15), bg=getattr(Pantone, i[0]), end='  ')
+            cprint(f'{i[1]} - Color of the year', color=Pantone.ULTIMATE_GRAY)
+
 
 class Bit4:
     """4 BIT colors"""
@@ -97,9 +109,9 @@ class Material:
     DEEP_PURPLE_200 = Color('rgb', 149, 117, 205)
     DEEP_PURPLE_300 = Color('rgb', 149, 117, 205)
     DEEP_PURPLE_400 = Color('rgb', 126, 87, 194)
-    DEEP_PURPLE_500 = Color('rgb', 63, 81, 181)
-    DEEP_PURPLE_600 = Color('rgb', 57, 73, 171)
-    DEEP_PURPLE_700 = Color('rgb', 48, 63, 159)
+    DEEP_PURPLE_500 = Color('rgb', 103, 58, 183)
+    DEEP_PURPLE_600 = Color('rgb', 94, 53, 177)
+    DEEP_PURPLE_700 = Color('rgb', 81, 45, 168)
     DEEP_PURPLE_800 = Color('rgb', 69, 39, 160)
     DEEP_PURPLE_900 = Color('rgb', 49, 27, 146)
     DEEP_PURPLE_A100 = Color('rgb', 179, 136, 255)
@@ -113,7 +125,7 @@ class Material:
     INDIGO_300 = Color('rgb', 121, 134, 203)
     INDIGO_400 = Color('rgb', 92, 107, 192)
     INDIGO_500 = Color('rgb', 63, 81, 181)
-    INDIGO_600 = Color('rgb', 63, 81, 181)
+    INDIGO_600 = Color('rgb', 57, 73, 171)
     INDIGO_700 = Color('rgb', 48, 63, 159)
     INDIGO_800 = Color('rgb', 40, 53, 147)
     INDIGO_900 = Color('rgb', 26, 35, 126)
@@ -170,7 +182,7 @@ class Material:
     TEAL_50 = Color('rgb', 224, 242, 241)
     TEAL_100 = Color('rgb', 178, 223, 219)
     TEAL_200 = Color('rgb', 128, 203, 196)
-    TEAL_300 = Color('rgb', 77, 208, 225)
+    TEAL_300 = Color('rgb', 77, 182, 172)
     TEAL_400 = Color('rgb', 38, 166, 154)
     TEAL_500 = Color('rgb', 0, 150, 136)
     TEAL_600 = Color('rgb', 0, 137, 123)
@@ -301,7 +313,7 @@ class Material:
     GREY_50 = Color('rgb', 250, 250, 250)
     GREY_100 = Color('rgb', 245, 245, 245)
     GREY_200 = Color('rgb', 238, 238, 238)
-    GREY_300 = Color('rgb', 238, 238, 238)
+    GREY_300 = Color('rgb', 224, 224, 224)
     GREY_400 = Color('rgb', 189, 189, 189)
     GREY_500 = Color('rgb', 158, 158, 158)
     GREY_600 = Color('rgb', 117, 117, 117)
@@ -322,29 +334,24 @@ class Material:
 
     @staticmethod
     def palette():
-        width = 8
+        width = 7
         color_names = 'RED', 'PINK', 'PURPLE', 'DEEP_PURPLE', 'INDIGO', 'BLUE', 'LIGHT_BLUE', 'CYAN', 'TEAL', 'GREEN', \
                       'LIGHT_GREEN', 'LIME', 'YELLOW', 'AMBER', 'ORANGE', 'DEEP_ORANGE', 'BROWN', 'GREY', 'BLUE_GREY'
+        color_codes = 100, 200, 300, 400, 500, 600, 700, 800, 900, 'A100', 'A200', 'A400', 'A700'
+        line_label_first = list()
+        line_label_second = list()
 
-        color_codes = 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 'A100', 'A200', 'A400', 'A700'
+        for color in color_names:
+            if '_' in color:
+                color = color.split('_')
+                line_label_first.append(color[0].ljust(width).title())
+                line_label_second.append(color[1].ljust(width).title())
+            else:
+                line_label_first.append(''.ljust(width).title())
+                line_label_second.append(color.ljust(width).title())
 
-        def color_name():
-            line_label_first = list()
-            line_label_second = list()
-
-            for color in color_names:
-                if '_' in color:
-                    color = color.split('_')
-                    line_label_first.append(color[0].ljust(width).lower())
-                    line_label_second.append(color[1].ljust(width).lower())
-                else:
-                    line_label_first.append(''.ljust(width).lower())
-                    line_label_second.append(color.ljust(width).lower())
-
-            print(''.ljust(width), ''.join(line_label_first))
-            print(''.ljust(width), ''.join(line_label_second))
-
-        color_name()
+        cprint(''.ljust(width), ''.join(line_label_first), sep='')
+        cprint(''.ljust(width), ''.join(line_label_second), sep='')
 
         def color_code(code, a=False):
             color_list = color_names
@@ -352,8 +359,8 @@ class Material:
                 color_list = color_list[:-3]
 
             cprint(f'{code} '.rjust(width), end='')
-            for color in color_list:
-                cprint(''.center(width), bg=getattr(Material, f'{color}_{code}'), end='')
+            for i in color_list:
+                cprint(''.center(width), bg=getattr(Material, f'{i}_{code}'), end='')
             print('')
 
         for c in color_codes:
