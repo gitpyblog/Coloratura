@@ -24,6 +24,18 @@ class Pantone:
     HONEYSUCKLE = Color('rgb', 216, 90, 123)  # 2011 - Color of the year
     TURQUOISE = Color('rgb', 96, 181, 170)  # 2010 - Color of the year
 
+    @staticmethod
+    def palette():
+        colors_of_the_year = ('ILLUMINATING', 2021), ('ULTIMATE_GRAY', 2021), ('CLASSIC_BLUE', 2020), \
+                             ('LIVING_CORAL', 2019), ('ULTRA_VIOLET', 2018), ('GREENERY', 2017), ('ROSE_QUARTZ', 2016), \
+                             ('SERENITY', 2016), ('MARSALA', 2015), ('RADIANT_ORCHID', 2014), ('EMERALD', 2013), \
+                             ('TANGERINE_TANGO', 2012), ('HONEYSUCKLE', 2011), ('TURQUOISE', 2010)
+
+        for i in colors_of_the_year:
+            cprint(i[0].rjust(15), styles=['bold'], end='  ')
+            cprint(''.ljust(15), bg=getattr(Pantone, i[0]), end='  ')
+            cprint(f'{i[1]} - Color of the year', color=Pantone.ULTIMATE_GRAY)
+
 
 class Bit4:
     """4 BIT colors"""
@@ -43,6 +55,56 @@ class Bit4:
     BRIGHT_MAGENTA = Color('bit4', 95)
     BRIGHT_CYAN = Color('bit4', 96)
     BRIGHT_WHITE = Color('bit4', 97)
+
+
+class Flat:
+    """Flat colors"""
+    TURQUOISE = Color('rgb', 26, 188, 156)
+    EMERALD = Color('rgb', 46, 204, 113)
+    PETERRIVER = Color('rgb', 52, 152, 219)
+    AMETHYST = Color('rgb', 155, 89, 182)
+    WETASPHALT = Color('rgb', 52, 73, 94)
+    GREENSEA = Color('rgb', 22, 160, 133)
+    NEMPHRITIS = Color('rgb', 39, 174, 96)
+    BELIZEHOLE = Color('rgb', 41, 128, 185)
+    WISTERIA = Color('rgb', 142, 68, 173)
+    MIDNIGHTBLUE = Color('rgb', 44, 62, 80)
+    SUNFLOWER = Color('rgb', 241, 196, 15)
+    CARROT = Color('rgb', 230, 126, 34)
+    ALIZARIN = Color('rgb', 231, 76, 60)
+    CLOUDS = Color('rgb', 236, 240, 241)
+    CONCRETE = Color('rgb', 149, 165, 166)
+    ORANGE = Color('rgb', 243, 156, 18)
+    PUMPKIN = Color('rgb', 211, 84, 0)
+    POMEGRANATE = Color('rgb', 192, 57, 43)
+    SILVER = Color('rgb', 189, 195, 199)
+    ASBESTOS = Color('rgb', 127, 140, 141)
+
+    @staticmethod
+    def palette():
+        cprint('TURQUOISE'.center(15), color=Flat.WETASPHALT, bg=Flat.TURQUOISE, end='')
+        cprint('EMERALD'.center(15), color=Flat.WETASPHALT, bg=Flat.EMERALD, end='')
+        cprint('PETERRIVER'.center(15), color=Flat.WETASPHALT, bg=Flat.PETERRIVER, end='')
+        cprint('AMETHYST'.center(15), color=Flat.MIDNIGHTBLUE, bg=Flat.AMETHYST, end='')
+        cprint('WETASPHALT'.center(15), color=Flat.SILVER, bg=Flat.WETASPHALT)
+
+        cprint('GREENSEA'.center(15), color=Flat.WETASPHALT, bg=Flat.GREENSEA, end='')
+        cprint('NEMPHRITIS'.center(15), color=Flat.MIDNIGHTBLUE, bg=Flat.NEMPHRITIS, end='')
+        cprint('BELIZEHOLE'.center(15), color=Flat.SILVER, bg=Flat.BELIZEHOLE, end='')
+        cprint('WISTERIA'.center(15), color=Flat.CLOUDS, bg=Flat.WISTERIA, end='')
+        cprint('MIDNIGHTBLUE'.center(15), color=Flat.ASBESTOS, bg=Flat.MIDNIGHTBLUE)
+
+        cprint('SUNFLOWER'.center(15), color=Flat.PUMPKIN, bg=Flat.SUNFLOWER, end='')
+        cprint('CARROT'.center(15), color=Flat.POMEGRANATE, bg=Flat.CARROT, end='')
+        cprint('ALIZARIN'.center(15), color=Flat.ORANGE, bg=Flat.ALIZARIN, end='')
+        cprint('CLOUDS'.center(15), color=Flat.CONCRETE, bg=Flat.CLOUDS, end='')
+        cprint('CONCRETE'.center(15), color=Flat.CLOUDS, bg=Flat.CONCRETE)
+
+        cprint('ORANGE'.center(15), color=Flat.ALIZARIN, bg=Flat.ORANGE, end='')
+        cprint('PUMPKIN'.center(15), color=Flat.SUNFLOWER, bg=Flat.PUMPKIN, end='')
+        cprint('POMEGRANATE'.center(15), color=Flat.ORANGE, bg=Flat.POMEGRANATE, end='')
+        cprint('SILVER'.center(15), color=Flat.MIDNIGHTBLUE, bg=Flat.SILVER, end='')
+        cprint('ASBESTOS'.center(15), color=Flat.WETASPHALT, bg=Flat.ASBESTOS)
 
 
 class Material:
@@ -93,8 +155,8 @@ class Material:
     PURPLE_A700 = Color('rgb', 170, 0, 255)
 
     DEEP_PURPLE_50 = Color('rgb', 237, 231, 246)
-    DEEP_PURPLE_100 = Color('rgb', 179, 157, 219)
-    DEEP_PURPLE_200 = Color('rgb', 149, 117, 205)
+    DEEP_PURPLE_100 = Color('rgb', 209, 196, 233)
+    DEEP_PURPLE_200 = Color('rgb', 179, 157, 219)
     DEEP_PURPLE_300 = Color('rgb', 149, 117, 205)
     DEEP_PURPLE_400 = Color('rgb', 126, 87, 194)
     DEEP_PURPLE_500 = Color('rgb', 103, 58, 183)
@@ -187,7 +249,7 @@ class Material:
     GREEN_200 = Color('rgb', 165, 214, 167)
     GREEN_300 = Color('rgb', 129, 199, 132)
     GREEN_400 = Color('rgb', 102, 187, 106)
-    GREEN_500 = Color('rgb', 102, 187, 106)
+    GREEN_500 = Color('rgb', 76, 175, 80)
     GREEN_600 = Color('rgb', 67, 160, 71)
     GREEN_700 = Color('rgb', 56, 142, 60)
     GREEN_800 = Color('rgb', 46, 125, 50)
@@ -322,29 +384,24 @@ class Material:
 
     @staticmethod
     def palette():
-        width = 8
+        width = 7
         color_names = 'RED', 'PINK', 'PURPLE', 'DEEP_PURPLE', 'INDIGO', 'BLUE', 'LIGHT_BLUE', 'CYAN', 'TEAL', 'GREEN', \
                       'LIGHT_GREEN', 'LIME', 'YELLOW', 'AMBER', 'ORANGE', 'DEEP_ORANGE', 'BROWN', 'GREY', 'BLUE_GREY'
-
         color_codes = 100, 200, 300, 400, 500, 600, 700, 800, 900, 'A100', 'A200', 'A400', 'A700'
+        line_label_first = list()
+        line_label_second = list()
 
-        def color_name():
-            line_label_first = list()
-            line_label_second = list()
+        for color in color_names:
+            if '_' in color:
+                color = color.split('_')
+                line_label_first.append(color[0].ljust(width).title())
+                line_label_second.append(color[1].ljust(width).title())
+            else:
+                line_label_first.append(''.ljust(width).title())
+                line_label_second.append(color.ljust(width).title())
 
-            for color in color_names:
-                if '_' in color:
-                    color = color.split('_')
-                    line_label_first.append(color[0].ljust(width).lower())
-                    line_label_second.append(color[1].ljust(width).lower())
-                else:
-                    line_label_first.append(''.ljust(width).lower())
-                    line_label_second.append(color.ljust(width).lower())
-
-            print(''.ljust(width), ''.join(line_label_first))
-            print(''.ljust(width), ''.join(line_label_second))
-
-        color_name()
+        cprint(''.ljust(width), ''.join(line_label_first), sep='')
+        cprint(''.ljust(width), ''.join(line_label_second), sep='')
 
         def color_code(code, a=False):
             color_list = color_names
@@ -352,8 +409,8 @@ class Material:
                 color_list = color_list[:-3]
 
             cprint(f'{code} '.rjust(width), end='')
-            for color in color_list:
-                cprint(''.center(width), bg=getattr(Material, f'{color}_{code}'), end='')
+            for i in color_list:
+                cprint(''.center(width), bg=getattr(Material, f'{i}_{code}'), end='')
             print('')
 
         for c in color_codes:
@@ -388,7 +445,7 @@ class Social:
     FOURSQUARE = Color('rgb', 249, 72, 119)
     LINKEDIN = Color('rgb', 10, 102, 194)
     SLIDESHARE = Color('rgb', 0, 119, 181)
-    YOTUBE = Color('rgb', 205, 32, 31)
+    YOUTUBE = Color('rgb', 205, 32, 31)
     PRODUCTHUNT = Color('rgb', 218, 85, 47)
     WHATSAPP = Color('rgb', 37, 211, 102)
     SLACK = Color('rgb', 58, 175, 133)
@@ -396,11 +453,11 @@ class Social:
     SKYPE = Color('rgb', 0, 175, 240)
     VK = Color('rgb', 76, 117, 163)
     REDDIT = Color('rgb', 255, 87, 0)
-    HACKERSNEWS = Color('rgb', 255, 102, 0)
+    HACKERNEWS = Color('rgb', 255, 102, 0)
     WECHAT = Color('rgb', 9, 184, 62)
     INSTAGRAM = Color('rgb', 228, 64, 95)
     BEHANCE = Color('rgb', 19, 20, 24)
 
     @staticmethod
-    def show_colors():
+    def palette():
         return ' '.join([i for i in Social.__dict__.keys()][2:-3])
