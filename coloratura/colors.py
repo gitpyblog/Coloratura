@@ -1,4 +1,4 @@
-from coloratura import Color
+from main import Color
 
 
 class Reset:
@@ -82,3 +82,7 @@ class Social:
     WECHAT = Color('rgb', 9, 184, 62)
     INSTAGRAM = Color('rgb', 228, 64, 95)
     BEHANCE = Color('rgb', 19, 20, 24)
+
+    @staticmethod
+    def show_colors():
+        return ' '.join([i for i in Social.__dict__.keys()][2:-3])
