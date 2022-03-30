@@ -57,6 +57,57 @@ class Bit4:
     BRIGHT_WHITE = Color('bit4', 97)
 
 
+class Flat:
+    """Flat colors"""
+    TURQUOISE = Color('rgb', 26, 188, 156)
+    EMERALD = Color('rgb', 46, 204, 113)
+    PETERRIVER = Color('rgb', 52, 152, 219)
+    AMETHYST = Color('rgb', 155, 89, 182)
+    WETASPHALT = Color('rgb', 52, 73, 94)
+    GREENSEA = Color('rgb', 22, 160, 133)
+    NEMPHRITIS = Color('rgb', 39, 174, 96)
+    BELIZEHOLE = Color('rgb', 41, 128, 185)
+    WISTERIA = Color('rgb', 142, 68, 173)
+    MIDNIGHTBLUE = Color('rgb', 44, 62, 80)
+    SUNFLOWER = Color('rgb', 241, 196, 15)
+    CARROT = Color('rgb', 230, 126, 34)
+    ALIZARIN = Color('rgb', 231, 76, 60)
+    CLOUDS = Color('rgb', 236, 240, 241)
+    CONCRETE = Color('rgb', 149, 165, 166)
+    ORANGE = Color('rgb', 243, 156, 18)
+    PUMPKIN = Color('rgb', 211, 84, 0)
+    POMEGRANATE = Color('rgb', 192, 57, 43)
+    SILVER = Color('rgb', 189, 195, 199)
+    ASBESTOS = Color('rgb', 127, 140, 141)
+
+    @staticmethod
+    def palette():
+        cprint('TURQUOISE'.center(15), color=Flat.WETASPHALT, bg=Flat.TURQUOISE, end='')
+        cprint('EMERALD'.center(15), color=Flat.WETASPHALT, bg=Flat.EMERALD, end='')
+        cprint('PETERRIVER'.center(15), color=Flat.WETASPHALT, bg=Flat.PETERRIVER, end='')
+        cprint('AMETHYST'.center(15), color=Flat.MIDNIGHTBLUE, bg=Flat.AMETHYST, end='')
+        cprint('WETASPHALT'.center(15), color=Flat.SILVER, bg=Flat.WETASPHALT)
+
+        cprint('GREENSEA'.center(15), color=Flat.WETASPHALT, bg=Flat.GREENSEA, end='')
+        cprint('NEMPHRITIS'.center(15), color=Flat.MIDNIGHTBLUE, bg=Flat.NEMPHRITIS, end='')
+        cprint('BELIZEHOLE'.center(15), color=Flat.SILVER, bg=Flat.BELIZEHOLE, end='')
+        cprint('WISTERIA'.center(15), color=Flat.CLOUDS, bg=Flat.WISTERIA, end='')
+        cprint('MIDNIGHTBLUE'.center(15), color=Flat.ASBESTOS, bg=Flat.MIDNIGHTBLUE)
+
+        cprint('SUNFLOWER'.center(15), color=Flat.PUMPKIN, bg=Flat.SUNFLOWER, end='')
+        cprint('CARROT'.center(15), color=Flat.POMEGRANATE, bg=Flat.CARROT, end='')
+        cprint('ALIZARIN'.center(15), color=Flat.ORANGE, bg=Flat.ALIZARIN, end='')
+        cprint('CLOUDS'.center(15), color=Flat.CONCRETE, bg=Flat.CLOUDS, end='')
+        cprint('CONCRETE'.center(15), color=Flat.CLOUDS, bg=Flat.CONCRETE)
+
+        cprint('ORANGE'.center(15), color=Flat.ALIZARIN, bg=Flat.ORANGE, end='')
+        cprint('PUMPKIN'.center(15), color=Flat.SUNFLOWER, bg=Flat.PUMPKIN, end='')
+        cprint('POMEGRANATE'.center(15), color=Flat.ORANGE, bg=Flat.POMEGRANATE, end='')
+        cprint('SILVER'.center(15), color=Flat.MIDNIGHTBLUE, bg=Flat.SILVER, end='')
+        cprint('ASBESTOS'.center(15), color=Flat.WETASPHALT, bg=Flat.ASBESTOS)
+
+
+
 class Material:
     """Material UI colors"""
     RED_50 = Color('rgb', 255, 235, 238)
