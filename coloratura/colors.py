@@ -392,20 +392,20 @@ class Material:
         color_names = 'RED', 'PINK', 'PURPLE', 'DEEP_PURPLE', 'INDIGO', 'BLUE', 'LIGHT_BLUE', 'CYAN', 'TEAL', 'GREEN', \
                       'LIGHT_GREEN', 'LIME', 'YELLOW', 'AMBER', 'ORANGE', 'DEEP_ORANGE', 'BROWN', 'GREY', 'BLUE_GREY'
         color_codes = 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 'A100', 'A200', 'A400', 'A700'
-        line_label_first = list()
-        line_label_second = list()
+        first_line_label = list()
+        second_line_label = list()
 
         for color in color_names:
             if '_' in color:
                 color = color.split('_')
-                line_label_first.append(color[0].ljust(width).title())
-                line_label_second.append(color[1].ljust(width).title())
+                first_line_label.append(color[0].ljust(width).title())
+                second_line_label.append(color[1].ljust(width).title())
             else:
-                line_label_first.append(''.ljust(width).title())
-                line_label_second.append(color.ljust(width).title())
+                first_line_label.append(''.ljust(width).title())
+                second_line_label.append(color.ljust(width).title())
 
-        cprint(''.ljust(width), ''.join(line_label_first), sep='')
-        cprint(''.ljust(width), ''.join(line_label_second), sep='')
+        cprint(''.ljust(width), ''.join(first_line_label), sep='')
+        cprint(''.ljust(width), ''.join(second_line_label), sep='')
 
         def color_code(code, a=False):
             color_list = color_names
