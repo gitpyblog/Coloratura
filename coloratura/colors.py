@@ -1,12 +1,6 @@
 from coloratura import Color
 
 
-class Reset:
-    COLORS = '\033[39m'
-    BG = '\033[49m'
-    ALL = '\033[0m'
-
-
 class Pantone:
     """Pantone colors"""
     ILLUMINATING = Color('rgb', 245, 233, 77)  # 2021 - Color of the year

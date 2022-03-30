@@ -2,6 +2,10 @@ from typing import Union
 
 
 class Color:
+    FONT = '\033[39m'
+    BG = '\033[49m'
+    RESET = '\033[0m'
+
     def __init__(self, color_space: Union[str, None], *args: any):
         """
         With this class you can create your own custom colors.
@@ -12,9 +16,14 @@ class Color:
             color_space: color space. Currently, supported rgb
             args: Color values
         """
-
         self.color_space = str(color_space).lower()
         self.color = args
+
+    def __str__(self):
+        if self.color_space == 'rgb':
+            return f'\033[38;2;{self.color[0]};{self.color[1]};{self.color[2]}m'
+        elif self.color_space == 'bit4':
+            return f'\033[{self.color[0]}m'
 
 
 def cprint(*text, color: Color = None, bg: Color = None, styles: list = None, sep=' ', end='\n') -> print:
@@ -35,37 +44,31 @@ def cprint(*text, color: Color = None, bg: Color = None, styles: list = None, se
     Returns:
         print() with a color, background color, and styles.
     """
-    update_string = str()
-    for element in text:
-        update_string += str(element)+sep
+    update_string = sep.join([str(elem) for elem in text])
 
-    update_string = update_string.rstrip(sep)
-
-    if color is not None:
+    if color:
         if color.color_space == 'rgb':
             update_string = f'\033[38;2;{color.color[0]};{color.color[1]};{color.color[2]}m{update_string}'
         elif color.color_space == 'bit4':
             update_string = f'\033[{color.color[0]}m{update_string}'
 
-    if bg is not None:
+    if bg:
         if bg.color_space == 'rgb':
             update_string = f'\033[48;2;{bg.color[0]};{bg.color[1]};{bg.color[2]}m{update_string}'
         elif bg.color_space == 'bit4':
-            update_string = f'\033[{bg.color[0] + 10}m{update_string}'
+            update_string = f'\033[{bg.color[0]}m{update_string}'
 
-    if type(styles) is list and styles is not None:
+    if styles:
+        decorations = {
+            'bold': '\033[1m',
+            'italic': '\033[3m',
+            'underline': '\033[4m',
+            'strong-underline': '\033[21m',
+            'crossed-out': '\033[9m',
+            'framed': '\033[51m'
+        }
         for style in styles:
-            if 'bold' == style:
-                update_string = '\033[1m' + update_string
-            if 'italic' == style:
-                update_string = '\033[3m' + update_string
-            if 'underline' == style:
-                update_string = '\033[4m' + update_string
-            if 'strong-underline' == style:
-                update_string = '\033[21m' + update_string
-            if 'crossed-out' == style:
-                update_string = '\033[9m' + update_string
-            if 'framed' == style:
-                update_string = '\033[51m' + update_string
+            if style in decorations:
+                update_string = f'{decorations[style]}{update_string}'
 
-    return print(update_string, '\033[0m', sep='', end=end)
+    return print(f'{update_string}\033[0m', sep=sep, end=end)
