@@ -58,8 +58,16 @@ class Bit4:
 
     @staticmethod
     def palette():
-        ...
-
+        width = 15
+        rows = 4
+        columns = 4
+        colors = [color for color in Bit4.__dict__.keys()][2:-3]
+        for row in range(rows):
+            for column in range(columns):
+                i = row * columns + column
+                cprint(f'\033[7m{colors[i].center(width)}\033[0m', bg=getattr(Bit4, colors[i]), end='')
+                if column == columns - 1:
+                    print()
 
 class Flat:
     """Flat colors"""
@@ -464,4 +472,13 @@ class Social:
 
     @staticmethod
     def palette():
-        return ' '.join([i for i in Social.__dict__.keys()][2:-3])
+        width = 15
+        rows = 7
+        columns = 5
+        colors = [color for color in Social.__dict__.keys()][2:-3]
+        for row in range(rows):
+            for column in range(columns):
+                i = row * columns + column
+                cprint(colors[i].center(width), bg=getattr(Social, colors[i]), end='')
+                if column == columns - 1:
+                    print()

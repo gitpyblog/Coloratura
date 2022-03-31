@@ -39,7 +39,7 @@ def colors_list(colour):
     c = list()
     for i in colour.__dict__:
         c.append(i)
-    return c[2:-2:]
+    return c[2:-3]
 
 
 def colors(palette):
@@ -74,12 +74,12 @@ def colors(palette):
 
 
 # Material.palette()
-print('')
-Pantone.palette()
-print('')
+# print('')
+# Pantone.palette()
+# print('')
 Bit4.palette()
-print('')
-Material.palette()
+# print('')
+# Material.palette()
 print('')
 Flat.palette()
 print('')
