@@ -42,7 +42,7 @@ cprint('This string is italic and green', color=Bit4.GREEN, styles=['italic'])
 You can mix multiple text styles
 
 ```python
-cprint('This string is italic and bold', styles = ['italic', 'bold'])
+cprint('This string is italic and bold', styles=['italic', 'bold'])
 ```
 
 ## Colors and styles
@@ -91,6 +91,26 @@ cprint('This string is italic and bold', styles = ['italic', 'bold'])
 > ![Bit4](https://img.shields.io/badge/-BRIGHT__CYAN-55ffff?style=flat-square)
 > ![Bit4](https://img.shields.io/badge/-BRIGHT__WHITE-fafafa?style=flat-square)
 
+### List of all colors from the Material palette:
+
+![material.jpg](./assets/material.jpg)
+
+### List of all colors from the Flat palette:
+
+![flat.jpg](./assets/flat.jpg)
+
+### List of all colors from the Social palette:
+
+![social.jpg](./assets/social.jpg)
+
+**..pssst!**
+Using .palette()  you can check all the colors!
+
+```python
+# example
+Material.palette()
+```
+
 **Too little? 🤔**
 
 With the Color class you can define your own colors in the full RGB spectrum 🤯
@@ -100,7 +120,7 @@ Look how simple it is:
 ```python
 CUSTOM_COLOR = Color('rgb', 191, 25, 50)
 ```
-> ![custom](https://img.shields.io/badge/-CUSTOM__COLOR-bf1932?style=flat-square)
 
+> ![custom](https://img.shields.io/badge/-CUSTOM__COLOR-bf1932?style=flat-square)
 
 ### *..and this is just the beginning of this great library!* 💚
