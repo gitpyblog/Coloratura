@@ -1,6 +1,10 @@
 # 🐦CHANGELOG
 
 ---
+### 🎉 1.0 - stable production version 
+* New color palettes have been added(flat, material, social,)
+* little bugs fixed
+* @rafkow91 and @MariuszDrabik joined the project - thank you for your support!
 
 ### 🐛 0.9.35
 * Fixed typing bug
