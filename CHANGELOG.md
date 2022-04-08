@@ -2,8 +2,9 @@
 
 ---
 ### 🎉 1.0 - stable production version 
-* New color palettes have been added(flat, material, social,)
-* little bugs fixed
+* New color palettes have been added(flat, material, social)
+* Added .palette() to printed all colors
+* Fixed little bugs
 * @rafkow91 and @MariuszDrabik joined the project - thank you for your support!
 
 ### 🐛 0.9.35
