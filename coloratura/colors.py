@@ -56,6 +56,18 @@ class Bit4:
     BRIGHT_CYAN = Color('bit4', 96)
     BRIGHT_WHITE = Color('bit4', 97)
 
+    @staticmethod
+    def palette():
+        width = 15
+        rows = 4
+        columns = 4
+        colors = [color for color in Bit4.__dict__.keys()][2:-3]
+        for row in range(rows):
+            for column in range(columns):
+                i = row * columns + column
+                cprint(f'\033[7m{colors[i].center(width)}\033[0m', bg=getattr(Bit4, colors[i]), end='')
+                if column == columns - 1:
+                    print()
 
 class Flat:
     """Flat colors"""
@@ -92,13 +104,13 @@ class Flat:
         cprint('NEMPHRITIS'.center(15), color=Flat.MIDNIGHTBLUE, bg=Flat.NEMPHRITIS, end='')
         cprint('BELIZEHOLE'.center(15), color=Flat.SILVER, bg=Flat.BELIZEHOLE, end='')
         cprint('WISTERIA'.center(15), color=Flat.CLOUDS, bg=Flat.WISTERIA, end='')
-        cprint('MIDNIGHTBLUE'.center(15), color=Flat.ASBESTOS, bg=Flat.MIDNIGHTBLUE)
+        cprint('MIDNIGHTBLUE'.center(15), color=Flat.CONCRETE, bg=Flat.MIDNIGHTBLUE)
 
         cprint('SUNFLOWER'.center(15), color=Flat.PUMPKIN, bg=Flat.SUNFLOWER, end='')
         cprint('CARROT'.center(15), color=Flat.POMEGRANATE, bg=Flat.CARROT, end='')
         cprint('ALIZARIN'.center(15), color=Flat.ORANGE, bg=Flat.ALIZARIN, end='')
         cprint('CLOUDS'.center(15), color=Flat.CONCRETE, bg=Flat.CLOUDS, end='')
-        cprint('CONCRETE'.center(15), color=Flat.CLOUDS, bg=Flat.CONCRETE)
+        cprint('CONCRETE'.center(15), color=Flat.MIDNIGHTBLUE, bg=Flat.CONCRETE)
 
         cprint('ORANGE'.center(15), color=Flat.ALIZARIN, bg=Flat.ORANGE, end='')
         cprint('PUMPKIN'.center(15), color=Flat.SUNFLOWER, bg=Flat.PUMPKIN, end='')
@@ -387,21 +399,21 @@ class Material:
         width = 7
         color_names = 'RED', 'PINK', 'PURPLE', 'DEEP_PURPLE', 'INDIGO', 'BLUE', 'LIGHT_BLUE', 'CYAN', 'TEAL', 'GREEN', \
                       'LIGHT_GREEN', 'LIME', 'YELLOW', 'AMBER', 'ORANGE', 'DEEP_ORANGE', 'BROWN', 'GREY', 'BLUE_GREY'
-        color_codes = 100, 200, 300, 400, 500, 600, 700, 800, 900, 'A100', 'A200', 'A400', 'A700'
-        line_label_first = list()
-        line_label_second = list()
+        color_codes = 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 'A100', 'A200', 'A400', 'A700'
+        first_line_label = list()
+        second_line_label = list()
 
         for color in color_names:
             if '_' in color:
                 color = color.split('_')
-                line_label_first.append(color[0].ljust(width).title())
-                line_label_second.append(color[1].ljust(width).title())
+                first_line_label.append(color[0].ljust(width).title())
+                second_line_label.append(color[1].ljust(width).title())
             else:
-                line_label_first.append(''.ljust(width).title())
-                line_label_second.append(color.ljust(width).title())
+                first_line_label.append(''.ljust(width).title())
+                second_line_label.append(color.ljust(width).title())
 
-        cprint(''.ljust(width), ''.join(line_label_first), sep='')
-        cprint(''.ljust(width), ''.join(line_label_second), sep='')
+        cprint(''.ljust(width), ''.join(first_line_label), sep='')
+        cprint(''.ljust(width), ''.join(second_line_label), sep='')
 
         def color_code(code, a=False):
             color_list = color_names
@@ -460,4 +472,13 @@ class Social:
 
     @staticmethod
     def palette():
-        return ' '.join([i for i in Social.__dict__.keys()][2:-3])
+        width = 15
+        rows = 7
+        columns = 5
+        colors = [color for color in Social.__dict__.keys()][2:-3]
+        for row in range(rows):
+            for column in range(columns):
+                i = row * columns + column
+                cprint(colors[i].center(width), bg=getattr(Social, colors[i]), end='')
+                if column == columns - 1:
+                    print()
