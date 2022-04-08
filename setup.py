@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 NAME = 'coloratura'
-VERSION = '0.9.35'
+VERSION = '1.0'
 DESCRIPTION = '🦜Awesome cprint() function to colored terminal text. Supported full RGB!'
 CLASSIFIERS = [
-    'Development Status :: 4 - Beta',
+    'Development Status :: 5 - Production/Stable',
     'Intended Audience :: Developers',
     'Programming Language :: Python :: 3',
     'License :: OSI Approved :: MIT License',

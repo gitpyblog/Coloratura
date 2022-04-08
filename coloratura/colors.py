@@ -69,6 +69,7 @@ class Bit4:
                 if column == columns - 1:
                     print()
 
+
 class Flat:
     """Flat colors"""
     TURQUOISE = Color('rgb', 26, 188, 156)
